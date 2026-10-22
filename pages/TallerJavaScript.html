@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Taller JavaScript Parte 2 - VideoClub Xelula</title>
+	<!-- Todas las páginas que desarrolle, deben tener la misma estructura-->
+    <!-- MetaData-->
+    <!-- Página principal de las practicas-->
+    <!-- ================ metadatos================== -->
+    <meta charset="utf-8">
+	<!-- La escritura de caracteres especiales áéíóú ñ-->
+    <meta name="description" content="practicas-- img,html,css,js"><!-- -->
+    <meta name="keywords" content="HTM, CSS, JavaScript"><!-- -->
+    <meta name="author" content="Gustavo"><!-- -->
+    <!--<meta http-equiv="refresh" content="10"><!-- -->-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Esrto no se deberia hacer, por que al ser un proceso en cascada se cargaria antes que hacer el HTML-->
+	<!--<script src="../js/JavaScript.js"> </script>-->
+	<link rel="stylesheet" href="../css/styleJavaScript.css">
+</head>
+<body>
+
+    <h1>Registro de alquiler - VideoClub Xelula</h1>
+
+    <h2>Datos de la película</h2>
+
+    <label for="pelicula">Título de la película:</label>
+    <input type="text" id="pelicula" placeholder="Ejemplo: Cars">
+    <p>Película escrita: <span id="vistaPelicula">Ninguna</span></p>
+
+    <br>
+
+    <label for="genero">Género:</label>
+    <select id="genero">
+        <option value="">Seleccione un género</option>
+        <option value="Animación">Animación</option>
+        <option value="Acción">Acción</option>
+        <option value="Comedia">Comedia</option>
+        <option value="Terror">Terror</option>
+        <option value="Aventura">Aventura</option>
+    </select>
+
+    <br><br>
+
+    <label for="precio">Precio de alquiler por día:</label>
+    <input type="number" id="precio" step="0.01"
+           placeholder="Ejemplo: 1.50">
+
+    <br><br>
+
+    <label for="dias">Días de alquiler:</label>
+    <input type="number" id="dias" step="1"
+           placeholder="Ejemplo: 3">
+
+    <br><br>
+
+    <label for="descuento">Aplicar descuento del 10%:</label>
+    <input type="checkbox" id="descuento">
+
+    <br><br>
+
+    <button id="btnCalcular">Calcular alquiler</button>
+    <button id="btnLimpiar">Limpiar</button>
+
+    <h2>Resultado del alquiler</h2>
+
+    <p id="mensaje">Ingrese los datos y calcule el alquiler.</p>
+
+    <p>Película: <span id="resultadoPelicula">---</span></p>
+    <p>Género: <span id="resultadoGenero">---</span></p>
+    <p>Días de alquiler: <span id="resultadoDias">0</span></p>
+    <p>Subtotal: $<span id="resultadoSubtotal">0.00</span></p>
+    <p>Descuento: $<span id="resultadoDescuento">0.00</span></p>
+    <p>Total a pagar: $<span id="resultadoTotal">0.00</span></p>
+	
+	
+	<section id="preguntas-taller" class="preguntas-taller">
+    <header class="encabezado-preguntas">
+        <p>SOFG1006 – Desarrollo de Aplicaciones Web y Móviles</p>
+        <h2>Preguntas sobre JavaScript</h2>
+    </header>
+
+    <ol class="lista-preguntas">
+        <li>
+            <h3>¿Qué diferencia hay entre <code>let</code> y <code>const</code> en este ejercicio?</h3>
+
+            <ul>
+                <li>
+                    <code>let</code> se usa para variables cuyo valor puede cambiar durante
+                    la ejecución, por ejemplo: <code>subtotal</code>, <code>total</code>,
+                    <code>precioUnitario</code> o <code>cantidadProducto</code>.
+                </li>
+
+                <li>
+                    <code>const</code> se usa para valores o referencias que no serán
+                    reasignados, por ejemplo los elementos obtenidos con
+                    <code>getElementById</code> o la constante
+                    <code>PORCENTAJE_DESCUENTO</code>.
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <h3>¿Por qué <code>precio.value</code> debe convertirse con <code>Number()</code>?</h3>
+
+            <p>
+                Porque <code>precio.value</code> obtiene el dato como texto, aunque el
+                elemento <code>input</code> sea de tipo <code>number</code>. Para poder
+                hacer operaciones matemáticas correctamente, el valor se convierte a
+                número usando <code>Number()</code>.
+            </p>
+        </li>
+
+        <li>
+            <h3>¿Qué tipo de dato devuelve <code>descuento.checked</code>?</h3>
+
+            <p><code>descuento.checked</code> devuelve un dato booleano:</p>
+
+            <ul>
+                <li>
+                    <code>true</code>, si el checkbox está marcado.
+                </li>
+
+                <li>
+                    <code>false</code>, si el checkbox no está marcado.
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <h3>¿Qué función se encarga de calcular el subtotal?</h3>
+
+            <pre><code>function calcularSubtotal(precioUnitario, cantidadProducto) {
+    return precioUnitario * cantidadProducto;
+}</code></pre>
+
+            <p>
+                La función recibe el precio unitario y la cantidad del producto. Después,
+                multiplica ambos valores y retorna el subtotal.
+            </p>
+        </li>
+
+        <li>
+            <h3>¿Qué función retorna un objeto?</h3>
+
+            <pre><code>function crearObjetoVenta(
+    nombreProducto,
+    nombreCategoria,
+    subtotal,
+    valorDescuento,
+    total
+) {
+    let venta = {
+        producto: nombreProducto,
+        categoria: nombreCategoria,
+        subtotal: subtotal,
+        descuento: valorDescuento,
+        total: total
+    };
+
+    return venta;
+}</code></pre>
+
+            <p>
+                La función <code>crearObjetoVenta()</code> crea un objeto llamado
+                <code>venta</code> y lo devuelve mediante la instrucción
+                <code>return</code>.
+            </p>
+        </li>
+
+        <li>
+            <h3>¿Qué evento permite actualizar el nombre del producto mientras se escribe?</h3>
+
+            <ul>
+                <li>
+                    El evento <code>input</code>.
+                </li>
+
+                <li>
+                    Este evento se ejecuta cada vez que el usuario escribe, borra o
+                    modifica el contenido del campo.
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <h3>¿Qué método se usa para seleccionar elementos por id?</h3>
+
+            <pre><code>document.getElementById("id_del_elemento");</code></pre>
+
+            <p>
+                El método <code>getElementById()</code> permite obtener un elemento HTML
+                mediante el valor de su atributo <code>id</code>.
+            </p>
+        </li>
+
+        <li>
+            <h3>¿Por qué se usa <code>textContent</code> para mostrar resultados?</h3>
+
+            <ul>
+                <li>
+                    Porque <code>textContent</code> permite cambiar el texto visible de
+                    un elemento HTML desde JavaScript.
+                </li>
+
+                <li>
+                    Se utiliza para mostrar resultados como el producto, la categoría,
+                    el subtotal, el descuento y el total sin recargar la página.
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <h3>¿Qué ocurre si el precio ingresado es 0?</h3>
+
+            <p>
+                La función <code>validarDatos()</code> detecta que el precio no es válido,
+                porque debe ser mayor que <code>0</code>.
+            </p>
+
+            <p>
+ 
+
+	<!-- ================ Pie de página ================== -->
+    <footer>
+        <p>Desarrollado por: Jose Gustavo Moscoso Ramos</p>
+        <p>
+            <a href="correo: jgmoscos@espol.edu.ec">Correo</a>
+            <a href="numero: 0980463064">Celular</a>
+        </p>
+        <p> © 2025 - Página de practicas académicas ESPOL</p>
+    </footer>
+    <script src="JavaScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+/*selector base - selector d etiqueta*/
+p{
+	color:red;
+}
+
+h1 {
+	background:yellow;
+}
+
+/*selector de classes*/
+.Ipsum {
+	background:green;
+}
+
+p.Ipsum{
+	color:black;
+}
+
+.caja {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 15px;
+}
+
+.caja2 {
+  box-sizing: content-box;
+  width: 200px;
+  height: 100px;
+  padding: 20px 20px 20px 20px;
+  border-width: 5px 5px 5px 5px;
+  border-style: solid;
+  margin: 15px 15px 15px 15px;
+}"								
+								
+								
+								
+								
+								
+								
+								
+								
