@@ -1,0 +1,73 @@
+/* =========================================
+   Estilos Generales y Tipografía
+   ========================================= */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.login-card {
+    max-width: 450px;
+    border-radius: 12px;
+    border: 1px solid #495057;
+}
+
+/* =========================================
+   Efectos Visuales Esports (Brillos y Neón)
+   ========================================= */
+
+/* Resplandor para títulos principales[cite: 16] */
+h1[data-template-id="hero-title"] {
+    text-shadow: 0 0 15px rgba(232, 247, 255, 0.4), 0 0 30px rgba(41, 168, 255, 0.6);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Efecto Neón Animado para botones principales[cite: 16] */
+.primary-btn {
+    box-shadow: 0 0 10px rgba(41, 168, 255, 0.5), 0 0 20px rgba(41, 168, 255, 0.3);
+    animation: neonPulse 2s infinite alternate;
+    border: 1px solid #29a8ff;
+    transition: background-color 0.3s;
+}
+
+@keyframes neonPulse {
+    from { 
+        box-shadow: 0 0 10px rgba(41, 168, 255, 0.5), 0 0 20px rgba(41, 168, 255, 0.3); 
+    }
+    to { 
+        box-shadow: 0 0 15px rgba(41, 168, 255, 0.8), 0 0 30px rgba(41, 168, 255, 0.6), 0 0 45px rgba(41, 168, 255, 0.4); 
+    }
+} /*[cite: 16] */
+
+/* Hover Gamer para tarjetas de interacción[cite: 16] */
+.card-hover {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: #29a8ff;
+    box-shadow: 0 0 25px rgba(41, 168, 255, 0.4), inset 0 0 15px rgba(41, 168, 255, 0.1);
+} /*[cite: 16] */
+
+/* =========================================
+   Adaptabilidad Responsive (Mobile First)
+   ========================================= */
+/* Ajuste de contenedores para que el contenido no se desborde en móviles[cite: 14] */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 768px) {
+    h1[data-template-id="hero-title"] {
+        font-size: 2rem;
+    }
+    
+    .primary-btn {
+        padding: 12px;
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--[cite: 14] -->
+    <title>Login - GGspol Hub</title>
+    <!-- Bootstrap CSS para estructura rápida -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark text-white d-flex align-items-center justify-content-center vh-100">
+    
+    <main class="text-center w-100"> <!--[cite: 9] -->
+        <!-- Atributo data-template-id para activar el efecto Glow del CSS -->
+        <h1 data-template-id="hero-title" class="mb-4">GGspol Hub</h1> 
+        
+        <section class="card bg-secondary text-light p-4 login-card mx-auto"> <!--[cite: 9] -->
+            <h2 class="h4 mb-4">Iniciar Sesión</h2>
+            
+            <form id="form-login">
+                <fieldset> <!-- Agrupación semántica de controles[cite: 10] -->
+                    <div class="mb-3 text-start">
+                        <label for="usuario" class="form-label">Usuario / Alias:</label>
+                        <input type="text" id="usuario" class="form-control" required>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="password" class="form-label">Contraseña:</label>
+                        <input type="password" id="password" class="form-control" required>
+                    </div>
+                    <div class="mb-4 text-start">
+                        <label for="rol" class="form-label">Simular Rol de Ingreso:</label>
+                        <select id="rol" class="form-select" required> <!--[cite: 10] -->
+                            <option value="Administrador">Administrador</option>
+                            <option value="Dueño de Equipo">Dueño de Equipo</option>
+                            <option value="Jugador">Jugador</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary w-100 primary-btn">Acceder al Dashboard</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        // Lógica simple para simular el guardado de la sesión y redirigir
+        document.getElementById('form-login').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const rol = document.getElementById('rol').value;
+            localStorage.setItem('ggspol_rol_simulado', rol);
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
