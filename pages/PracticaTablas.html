@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- ================ Metadatos ================== -->
+    <meta charset="utf-8">
+    <meta name="description" content="Práctica 9: Tablas en HTML - Taller 1 de Desarrollo Web">
+    <meta name="keywords" content="HTML, Tablas, thead, tbody, tfoot, colspan, rowspan, border, ESPOL">
+    <meta name="author" content="Jose Gustavo Moscoso Ramos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <!-- ================ Título e Iconos ================== -->
+    <title>Practica Jose Gustavo Moscoso Ramos - Tablas en HTML</title>
+    <link rel="icon" href="../img/icon/Gengar.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- ================ Cabecera y Menú Horizontal ================== -->
+    <header>
+        <h1>Práctica 9: Tablas en HTML</h1>
+        <nav>
+            <!--  Lista de navegacion de las prácticas por desarrollar-->
+            <a href="../pages/PracticaTexto.html">Práctica de Texto</a> |
+            <a href="../pages/PracticaGoogleSite.html">Práctica de Builder (Google Site)</a> |
+            <a href="../pages/PracticaTexto.html">Práctica de Builder (Canva)</a> |
+            <a href="../ia/PracticaIA.html">Práctica de Inteligencia Artificial</a> |
+            <a href="../pages/PracticaListas.html">Práctica de Listas</a> |
+            <a href="../pages/PracticaImg.html">Práctica de Imágenes</a> |
+            <a href="../pages/PracticaAudio.html">Práctica de Audio</a> |
+            <a href="../pages/PracticaVideo.html">Práctica de Video</a> |
+            <a href="../pages/PracticaTablas.html">Práctica de Tablas</a> |
+            <a href="../pages/PracticaCss.html">Práctica de Css</a> |
+            <a href="../pages/PracticaCopyPaste.html">Práctica de CopyPaste</a> |
+            <a href="../pages/PracticaHipervinculos.html">Practica de Hipervínculos</a> |
+            <a href="../pages/PracticaJavaScript.html">Práctica de JavaScript</a> |
+            <a href="../pages/PracticaControles.html">Práctica de Controles</a> |
+            <a href="../pages/PracticaFormulario.html">Práctica de Formulario</a> |
+            <a href="../pages/PracticaFormulario2.html">Práctica de Formulario-2</a> |
+            <a href="../pages/PracticaMenuHorizontal.html">Práctica de Menú Horizontal</a> |
+            <a href="../pages/PracticaMenuVertical.html">Práctica de Menú Vertical</a> |
+            <a href="../pages/PracticaCrazy.html">Práctica de Crazy</a> |<!-- Diseño interactivo Propio "Loco" -->
+            <a href="../pages/BootStrap/PracticaBootStrap.html">Práctica BootStrap</a> |
+            <a href="../pages/TailWind/PracticaTailWind.html">Práctica TailWind</a> |
+            <a href="../pages/TailWind/PracticaTailWind_Black.html">Práctica TailWind - Black</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- ================ Contenido Principal ================== -->
+    <main>
+        <section>
+            <h2>Descripción de la Práctica</h2>
+            <p>
+                Demostración exhaustiva de las etiquetas tabulares en HTML (<code>&lt;table&gt;</code>, <code>&lt;caption&gt;</code>, 
+                <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>, <code>&lt;tr&gt;</code>, 
+                <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;colgroup&gt;</code> y <code>&lt;col&gt;</code>) 
+                junto con los atributos de combinación de celdas (<code>colspan</code> y <code>rowspan</code>).
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- 1. Tabla básica con atributo border -->
+        <section>
+            <h2>1. Tabla básica (Atributo <code>border="1"</code>)</h2>
+            <p>Explicación: Estructura tabular elemental formada por filas y celdas sin separación semántica avanzada.</p>
+            <table border="1">
+                <tr>
+                    <td>Fila 1, Celda 1</td>
+                    <td>Fila 1, Celda 2</td>
+                </tr>
+                <tr>
+                    <td>Fila 2, Celda 1</td>
+                    <td>Fila 2, Celda 2</td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- 2. Tabla con encabezado (<th>) -->
+        <section>
+            <h2>2. Tabla con Encabezados (&lt;th&gt;)</h2>
+            <p>Explicación: Utiliza la etiqueta <code>&lt;th&gt;</code> en la primera fila para destacar los títulos de cada columna en negrita y centrados.</p>
+            <table border="1">
+                <tr>
+                    <th>Código Materia</th>
+                    <th>Nombre de la Asignatura</th>
+                    <th>Créditos</th>
+                </tr>
+                <tr>
+                    <td>SOFG1006</td>
+                    <td>Desarrollo de Aplicaciones Web y Móviles</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>COMP1011</td>
+                    <td>Estructuras de Datos</td>
+                    <td>4</td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- 3. Tabla con caption -->
+        <section>
+            <h2>3. Tabla con Título Descriptivo (&lt;caption&gt;)</h2>
+            <p>Explicación: La etiqueta <code>&lt;caption&gt;</code> añade un título oficial y accesible en la parte superior de la tabla.</p>
+            <table border="1">
+                <caption>Listado Oficial de Estudiantes Matriculados - Paralelo 1</caption>
+                <tr>
+                    <th>Matrícula</th>
+                    <th>Estudiante</th>
+                    <th>Facultad</th>
+                </tr>
+                <tr>
+                    <td>202115234</td>
+                    <td>Jose Gustavo Moscoso Ramos</td>
+                    <td>FIEC</td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- 4. Tabla semántica con thead, tbody y tfoot -->
+        <section>
+            <h2>4. Tabla Semántica Completa (&lt;thead&gt;, &lt;tbody&gt; y &lt;tfoot&gt;)</h2>
+            <p>Explicación: Divide la tabla en tres secciones lógicas: encabezado, cuerpo de datos y pie de tabla para resúmenes o totales.</p>
+            <table border="1">
+                <caption>Presupuesto de Materiales para el Proyecto Semestral</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Componente</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Costo Unitario ($)</th>
+                        <th scope="col">Subtotal ($)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dominio Web (.com)</td>
+                        <td>1</td>
+                        <td>12.00</td>
+                        <td>12.00</td>
+                    </tr>
+                    <tr>
+                        <td>Hosting Cloud (Mes)</td>
+                        <td>3</td>
+                        <td>5.00</td>
+                        <td>15.00</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"><strong>Costo Total Estimado:</strong></td>
+                        <td><strong>$27.00</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- 5. Tabla con columnas combinadas (colspan) -->
+        <section>
+            <h2>5. Tabla con columnas combinadas (Atributo <code>colspan</code>)</h2>
+            <p>Explicación: El atributo <code>colspan</code> permite que una celda abarque horizontalmente el espacio de dos o más columnas.</p>
+            <table border="1">
+                <tr>
+                    <th>Día</th>
+                    <th colspan="2">Horario de Clases Semanales</th>
+                </tr>
+                <tr>
+                    <td>Lunes</td>
+                    <td>09:00 - 11:00 (Teoría Web)</td>
+                    <td>11:00 - 13:00 (Práctica HTML)</td>
+                </tr>
+                <tr>
+                    <td>Miércoles</td>
+                    <td colspan="2">14:00 - 18:00 (Laboratorio de Desarrollo Móvil)</td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- 6. Tabla con filas combinadas (rowspan) -->
+        <section>
+            <h2>6. Tabla con filas combinadas (Atributo <code>rowspan</code>)</h2>
+            <p>Explicación: El atributo <code>rowspan</code> permite que una celda se extienda verticalmente a través de varias filas.</p>
+            <table border="1">
+                <tr>
+                    <th>Módulo</th>
+                    <th>Sesión</th>
+                    <th>Tema Desarrollado</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Módulo 1</td>
+                    <td>Sesión 1</td>
+                    <td>Estructura global y etiquetas semánticas HTML</td>
+                </tr>
+                <tr>
+                    <td>Sesión 2</td>
+                    <td>Listas, tablas y multimedia (Audio y Video)</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Módulo 2</td>
+                    <td>Sesión 3</td>
+                    <td>Sintaxis de reglas y selectores CSS</td>
+                </tr>
+                <tr>
+                    <td>Sesión 4</td>
+                    <td>Diseño Responsive y Adaptable</td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- 7. Tabla con estilos de columnas usando colgroup y col -->
+        <section>
+            <h2>7. Agrupación de columnas (&lt;colgroup&gt; y &lt;col&gt;)</h2>
+            <p>Explicación: Las etiquetas <code>&lt;colgroup&gt;</code> y <code>&lt;col&gt;</code> permiten aplicar propiedades estructurales a columnas enteras de manera simultánea.</p>
+            <table border="1">
+                <colgroup>
+                    <col span="1" style="background-color: #e6f2ff;">
+                    <col span="2" style="background-color: #f9f9f9;">
+                </colgroup>
+                <tr>
+                    <th>Paralelo</th>
+                    <th>Profesor Guía</th>
+                    <th>Aula Asignada</th>
+                </tr>
+                <tr>
+                    <td>Paralelo 1</td>
+                    <td>Ing. Ing. Docente</td>
+                    <td>Lab FIEC 3</td>
+                </tr>
+                <tr>
+                    <td>Paralelo 2</td>
+                    <td>Dr. Investigador</td>
+                    <td>Lab FIEC 4</td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <p><a href="../index.html">⬅ Volver a la página principal (Inicio)</a></p>
+    </main>
+
+    <hr>
+
+    <!-- ================ Pie de página ================== -->
+    <footer>
+        <p>Desarrollado por: Jose Gustavo Moscoso Ramos</p>
+        <p>
+            Contacto: <a href="mailto:jgmoscos@espol.edu.ec">jgmoscos@espol.edu.ec (Correo)</a> | 
+            <a href="tel:0980463064">0980463064 (Celular)</a>
+        </p>
+        <p>© 2026 Jose Gustavo Moscoso Ramos. Todos los derechos reservados. Sitio desarrollado con fines académicos para la materia de Desarrollo Web - ESPOL.</p>
+    </footer>
+</body>
+
+</html>

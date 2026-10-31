@@ -1,0 +1,334 @@
+/* ==========================================================================
+   CSS UNIVERSAL MINIMALISTA - PALETA NORD & DEEP NAVY
+   Autor: Jose Gustavo Moscoso Ramos - ESPOL
+   ========================================================================== */
+
+:root {
+    /* Fondos: Negro suave, Azul Marino Profundo y Gris Pizarra (Nord Polar Night) */
+    --bg-main: #0f172a;          /* Azul marino muy oscuro (casi negro) */
+    --bg-surface: #1e293b;       /* Gris azulado oscuro para secciones y tarjetas */
+    --bg-elevated: #2e3440;      /* Gris nórdico para cabeceras, tablas y código */
+    --border-color: #334155;     /* Borde gris acero sutil */
+
+    /* Textos: Blancos y Grises suaves (Nord Snow Storm) */
+    --text-primary: #eceff4;     /* Blanco nieve suave (no encandila) */
+    --text-secondary: #cbd5e1;   /* Gris claro para lectura cómoda de párrafos */
+    --text-muted: #94a3b8;       /* Gris medio para notas y pie de página */
+
+    /* Acentos: Azul Marino, Acero y Hielo (Nord Frost) */
+    --accent-navy: #5e81ac;      /* Azul marino nórdico */
+    --accent-steel: #81a1c1;     /* Azul acero */
+    --accent-ice: #88c0d0;       /* Azul hielo brillante para enlaces y hover */
+}
+
+/* ================= 1. Reset y Configuración Base ================= */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================= 2. Estructura Semántica Principal ================= */
+header, main, footer {
+    width: 92%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+main {
+    padding: 1rem 0;
+}
+
+section, article {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.25rem 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* ================= 3. Menú de Navegación Horizontal ================= */
+nav {
+    margin-top: 1rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.75rem;
+    align-items: center;
+}
+
+nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.35rem 0.7rem;
+    border-radius: 6px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent-navy);
+    color: var(--text-primary);
+}
+
+/* ================= 4. Tipografía y Etiquetas de Texto ================= */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+    margin-top: 0;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 1.75rem;
+    color: var(--accent-ice);
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.35rem;
+    color: var(--accent-steel);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    margin-top: 1.2rem;
+}
+
+p, li, dd {
+    color: var(--text-secondary);
+}
+
+a {
+    color: var(--accent-ice);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent-steel);
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin: 1.75rem auto;
+    max-width: 1050px;
+}
+
+/* Etiquetas semánticas de texto (Práctica 4) */
+mark {
+    background-color: rgba(136, 192, 208, 0.2);
+    color: var(--accent-ice);
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+}
+
+blockquote {
+    margin: 1rem 0;
+    padding: 0.85rem 1.25rem;
+    background-color: var(--bg-elevated);
+    border-left: 4px solid var(--accent-navy);
+    border-radius: 0 6px 6px 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+code, kbd, samp, var {
+    font-family: 'Cascadia Code', 'Fira Code', Consolas, monospace;
+    background-color: var(--bg-elevated);
+    color: var(--accent-ice);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+    border: 1px solid var(--border-color);
+}
+
+pre {
+    background-color: var(--bg-elevated);
+    color: var(--text-primary);
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    overflow-x: auto;
+    font-family: 'Cascadia Code', Consolas, monospace;
+    font-size: 0.9rem;
+}
+
+address {
+    font-style: normal;
+    background-color: var(--bg-elevated);
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+/* ================= 5. Listas (Práctica 5 e Index) ================= */
+ul, ol {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.45rem;
+}
+
+dt {
+    color: var(--accent-ice);
+    margin-top: 0.75rem;
+}
+
+dd {
+    margin-left: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ================= 6. Tablas (Práctica 9) ================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem 0;
+    background-color: var(--bg-elevated);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: 600;
+    color: var(--accent-steel);
+    padding-bottom: 0.5rem;
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+th {
+    background-color: #242933;
+    color: var(--accent-ice);
+    font-weight: 600;
+}
+
+tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+tr:hover td {
+    background-color: rgba(94, 129, 172, 0.15);
+}
+
+/* ================= 7. Multimedia: Imágenes, Audio y Video ================= */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+figure {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: var(--bg-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    display: inline-block;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+audio {
+    width: 100%;
+    max-width: 480px;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+}
+
+/* ================= 8. Botones y Controles de Formulario ================= */
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 0.95rem;
+    background-color: var(--bg-elevated);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+}
+
+button {
+    background-color: var(--accent-navy);
+    color: var(--text-primary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+button:hover {
+    background-color: var(--accent-steel);
+    color: var(--bg-main);
+    transform: translateY(-1px);
+}
+
+/* ================= 9. Adaptabilidad Responsive ================= */
+@media (max-width: 768px) {
+    header, section, article, footer {
+        padding: 1.15rem;
+    }
+
+    h1 {
+        font-size: 1.45rem;
+    }
+
+    nav {
+        gap: 0.35rem;
+    }
+}
