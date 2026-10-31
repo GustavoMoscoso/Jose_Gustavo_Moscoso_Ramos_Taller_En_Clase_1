@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- ================ Metadatos ================== -->
+    <meta charset="utf-8">
+    <meta name="description" content="Práctica 6: Imágenes y Mapas de Imagen en HTML - Taller 1">
+    <meta name="keywords" content="HTML, Imágenes, img, figure, figcaption, picture, map, area, Nube, ESPOL">
+    <meta name="author" content="Jose Gustavo Moscoso Ramos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ================ Título e Iconos ================== -->
+    <title>Practica Jose Gustavo Moscoso Ramos - Imágenes en HTML</title>
+    <link rel="icon" href="../img/icon/Gengar.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- ================ Cabecera y Menú Horizontal ================== -->
+    <header>
+        <h1>Práctica 6: Imágenes en HTML</h1>
+    <nav>
+        <!--  Lista de navegacion de las prácticas por desarrollar-->
+        <a href="pages/PracticaTexto.html">Práctica de Texto</a> |
+        <a href="pages/PracticaGoogleSite.html">Práctica de Builder (Google Site)</a> |
+        <a href="pages/PracticaTexto.html">Práctica de Builder (Canva)</a> |
+        <a href="ia/PracticaIA.html">Práctica de Inteligencia Artificial</a> |
+        <a href="pages/PracticaListas.html">Práctica de Listas</a> |
+        <a href="pages/PracticaImg.html">Práctica de Imágenes</a> |
+        <a href="pages/PracticaAudio.html">Práctica de Audio</a> |
+        <a href="pages/PracticaVideo.html">Práctica de Video</a> |
+        <a href="pages/PracticaTablas.html">Práctica de Tablas</a> |
+        <a href="pages/PracticaCss.html">Práctica de Css</a> |
+        <a href="pages/PracticaCopyPaste.html">Práctica de CopyPaste</a> |
+        <a href="pages/PracticaHipervinculos.html">Practica de Hipervínculos</a> |
+        <a href="pages/PracticaJavaScript.html">Práctica de JavaScript</a> |
+        <a href="pages/PracticaControles.html">Práctica de Controles</a> |
+        <a href="pages/PracticaFormulario.html">Práctica de Formulario</a> |
+        <a href="pages/PracticaFormulario2.html">Práctica de Formulario-2</a> |
+        <a href="pages/PracticaMenuHorizontal.html">Práctica de Menú Horizontal</a> |
+        <a href="pages/PracticaMenuVertical.html">Práctica de Menú Vertical</a> |
+        <a href="pages/PracticaCrazy.html">Práctica de Crazy</a> |<!-- Diseño interactivo Propio "Loco" -->
+        <a href="pages/BootStrap/PracticaBootStrap.html">Práctica BootStrap</a> |
+        <a href="pages/TailWind/PracticaTailWind.html">Práctica TailWind</a> |
+        <a href="pages/TailWind/PracticaTailWind_Black.html">Práctica TailWind - Black</a>
+    </nav>
+    </header>
+
+    <hr>
+
+    <!-- ================ Contenido Principal ================== -->
+    <main>
+        <section>
+            <h2>Descripción de la Práctica</h2>
+            <p>
+                Demostración del uso de etiquetas multimedia para imágenes en HTML (<code>&lt;img&gt;</code>, 
+                <code>&lt;figure&gt;</code>, <code>&lt;figcaption&gt;</code>, <code>&lt;picture&gt;</code>, 
+                <code>&lt;source&gt;</code>, <code>&lt;map&gt;</code> y <code>&lt;area&gt;</code>), integrando la 
+                práctica de mapeo de dispositivos en la nube desarrollada en clase.
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- 1. Imagen desde un directorio local con alt, title, width y height -->
+        <section>
+            <h2>1. Imagen desde un directorio local (Atributos <code>src</code>, <code>alt</code>, <code>title</code>, <code>width</code> y <code>height</code>)</h2>
+            <p>
+                Explicación: Carga una imagen alojada en la carpeta <code>../img/</code> del proyecto utilizando una ruta relativa. 
+                Pasa el cursor sobre la imagen para ver el atributo <code>title</code>.
+            </p>
+            <img 
+                src="../img/icon/Gengar.ico" 
+                alt="Ícono de Gengar utilizado como favicon del proyecto" 
+                title="Gengar - Ícono oficial del sitio de Jose Gustavo Moscoso Ramos" 
+                width="128" 
+                height="128"
+            >
+        </section>
+
+        <hr>
+
+        <!-- 2. Imagen desde una dirección web externa -->
+        <section>
+            <h2>2. Imagen desde una dirección web (URL Externa)</h2>
+            <p>Explicación: Inserta una imagen alojada en un servidor externo mediante una ruta absoluta HTTP/HTTPS.</p>
+            <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" 
+                alt="Logotipo oficial de HTML5 desde Wikimedia Commons" 
+                title="Estándar HTML5 - W3C / WHATWG" 
+                width="200" 
+                height="200"
+            >
+        </section>
+
+        <hr>
+
+        <!-- 3. Imagen como enlace -->
+        <section>
+            <h2>3. Imagen como hipervínculo (&lt;a&gt; envolviendo a &lt;img&gt;)</h2>
+            <p>Explicación: Al colocar una etiqueta <code>&lt;img&gt;</code> dentro de <code>&lt;a&gt;</code>, la imagen se vuelve clicable. Haz clic en la imagen para ir al portal de la ESPOL en una nueva pestaña:</p>
+            <a href="https://www.espol.edu.ec" target="_blank" rel="noopener noreferrer" title="Haz clic para visitar el sitio oficial de la ESPOL">
+                <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Logo_ESPOL.svg" 
+                    alt="Logo de la Escuela Superior Politécnica del Litoral" 
+                    title="Ir al portal web de ESPOL (Nueva pestaña)" 
+                    width="300"
+                >
+            </a>
+        </section>
+
+        <hr>
+
+        <!-- 4. Imagen con pie de foto (<figure> y <figcaption>) -->
+        <section>
+            <h2>4. Imagen semántica con pie de foto (&lt;figure&gt; y &lt;figcaption&gt;)</h2>
+            <p>Explicación: La etiqueta <code>&lt;figure&gt;</code> agrupa una ilustración o diagrama, mientras que <code>&lt;figcaption&gt;</code> le asigna una leyenda descriptiva oficial.</p>
+            <figure>
+                <img 
+                    src="../img/Cloud-2.png" 
+                    alt="Diagrama de arquitectura de red y computación en la nube" 
+                    title="Arquitectura Cloud Computing" 
+                    width="450"
+                >
+                <figcaption>Figura 1: Ecosistema de dispositivos conectados a la infraestructura de la nube (Cloud-2.png).</figcaption>
+            </figure>
+        </section>
+
+        <hr>
+
+        <!-- 5. Etiquetas <picture> y <source> -->
+        <section>
+            <h2>5. Imágenes adaptables con &lt;picture&gt; y &lt;source&gt;</h2>
+            <p>
+                Explicación: El elemento <code>&lt;picture&gt;</code> permite definir múltiples fuentes (<code>&lt;source&gt;</code>) 
+                para que el navegador cargue una imagen distinta según el ancho de la pantalla (redimensiona la ventana del navegador para probarlo).
+            </p>
+            <picture>
+                <!-- Si la pantalla mide 800px o más, muestra el diagrama Cloud-2 -->
+                <source media="(min-width: 800px)" srcset="../img/Cloud-2.png">
+                <!-- Si la pantalla mide menos de 800px, muestra el ícono de Gengar -->
+                <source media="(max-width: 799px)" srcset="../img/icon/Gengar.ico">
+                <!-- Imagen de respaldo obligatoria -->
+                <img src="../img/Cloud-2.png" alt="Imagen adaptable demostrativa" title="Imagen cargada mediante la etiqueta picture" width="350">
+            </picture>
+        </section>
+
+        <hr>
+
+        <!-- 6. Mapa de Imagen interactivo (Tu avance de Cloud-2.png integrado) -->
+        <section>
+            <h2>6. Mapa de Imagen Interactivo (&lt;map&gt;, &lt;area&gt;, <code>usemap</code>, <code>shape</code> y <code>coords</code>)</h2>
+            <p>
+                Explicación: Esta sección integra la práctica desarrollada en clase sobre <strong>Cloud-2.png</strong>. 
+                Haz clic sobre cualquiera de los 8 dispositivos de la imagen para abrir su página descriptiva correspondiente ubicada en <code>Pages/Nube/</code>:
+            </p>
+
+            <!-- Imagen vinculada al mapa mediante usemap="#image-map" -->
+            <img 
+                src="../img/Cloud-2.png" 
+                usemap="#image-map" 
+                alt="Mapa interactivo de dispositivos conectados a la nube" 
+                title="Haz clic sobre un dispositivo para ver su información"
+            >
+
+            <!-- Definición del mapa con tus 8 dispositivos de la carpeta Nube -->
+            <!-- Nota: Si en tu Index.html original tienes coordenadas específicas distintas, puedes reemplazar el atributo coords conservando los href="Nube/..." -->
+            <map name="image-map">
+                <area target="_self" alt="Computadora de escritorio" title="Computadora de escritorio (PC)" href="Nube/Pc.html" coords="50,50,200,200" shape="rect">
+                <area target="_self" alt="Servidor" title="Servidor" href="Nube/servidores.html" coords="250,40,400,190" shape="rect">
+                <area target="_self" alt="Computador All in One" title="Computador All in One" href="Nube/allinone.html" coords="450,50,600,200" shape="rect">
+                <area target="_self" alt="Celular con teclado" title="Celular con teclado" href="Nube/celutecla.html" coords="50,230,200,380" shape="rect">
+                <area target="_self" alt="Laptop" title="Laptop" href="Nube/laptop.html" coords="250,230,400,380" shape="rect">
+                <area target="_self" alt="Celular táctil" title="Celular táctil (Smartphone)" href="Nube/celtactil.html" coords="450,230,600,380" shape="rect">
+                <area target="_self" alt="UPS" title="UPS (Sistema de Alimentación Ininterrumpida)" href="Nube/ups.html" coords="100,400,260,520" shape="rect">
+                <area target="_self" alt="Router / Dispositivo de red" title="Router (Dispositivo de red)" href="Nube/dispred.html" coords="320,400,480,520" shape="rect">
+            </map>
+
+            <h3>Acceso directo de respaldo a los 8 dispositivos mapeados:</h3>
+            <ul>
+                <li><a href="Nube/Pc.html">1. Computadora de escritorio (Pc.html)</a></li>
+                <li><a href="Nube/servidores.html">2. Servidor (servidores.html)</a></li>
+                <li><a href="Nube/allinone.html">3. Computador All in One (allinone.html)</a></li>
+                <li><a href="Nube/celutecla.html">4. Celular con teclado (celutecla.html)</a></li>
+                <li><a href="Nube/laptop.html">5. Laptop (laptop.html)</a></li>
+                <li><a href="Nube/celtactil.html">6. Celular táctil (celtactil.html)</a></li>
+                <li><a href="Nube/ups.html">7. Sistema de Alimentación Ininterrumpida - UPS (ups.html)</a></li>
+                <li><a href="Nube/dispred.html">8. Router / Dispositivo de red (dispred.html)</a></li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <p><a href="../index.html">⬅ Volver a la página principal (Inicio)</a></p>
+    </main>
+
+    <hr>
+
+    <!-- ================ Pie de página ================== -->
+    <footer>
+        <p>Desarrollado por: Jose Gustavo Moscoso Ramos</p>
+        <p>
+            Contacto: <a href="mailto:jgmoscos@espol.edu.ec">jgmoscos@espol.edu.ec (Correo)</a> | 
+            <a href="tel:0980463064">0980463064 (Celular)</a>
+        </p>
+        <p>© 2026 Jose Gustavo Moscoso Ramos. Todos los derechos reservados. Sitio desarrollado con fines académicos para la materia de Desarrollo Web - ESPOL.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- ================ Metadatos ================== -->
+    <meta charset="utf-8">
+    <meta name="description" content="Práctica 8: Video en HTML5 - Taller 1 de Desarrollo Web">
+    <meta name="keywords" content="HTML, Video, source, track, iframe, YouTube, poster, ESPOL">
+    <meta name="author" content="Jose Gustavo Moscoso Ramos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ================ Título e Iconos ================== -->
+    <title>Practica Jose Gustavo Moscoso Ramos - Video en HTML</title>
+    <link rel="icon" href="../img/icon/Gengar.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- ================ Cabecera y Menú Horizontal ================== -->
+    <header>
+        <h1>Práctica 8: Video en HTML</h1>
+    <nav>
+        <!--  Lista de navegacion de las prácticas por desarrollar-->
+        <a href="pages/PracticaTexto.html">Práctica de Texto</a> |
+        <a href="pages/PracticaGoogleSite.html">Práctica de Builder (Google Site)</a> |
+        <a href="pages/PracticaTexto.html">Práctica de Builder (Canva)</a> |
+        <a href="ia/PracticaIA.html">Práctica de Inteligencia Artificial</a> |
+        <a href="pages/PracticaListas.html">Práctica de Listas</a> |
+        <a href="pages/PracticaImg.html">Práctica de Imágenes</a> |
+        <a href="pages/PracticaAudio.html">Práctica de Audio</a> |
+        <a href="pages/PracticaVideo.html">Práctica de Video</a> |
+        <a href="pages/PracticaTablas.html">Práctica de Tablas</a> |
+        <a href="pages/PracticaCss.html">Práctica de Css</a> |
+        <a href="pages/PracticaCopyPaste.html">Práctica de CopyPaste</a> |
+        <a href="pages/PracticaHipervinculos.html">Practica de Hipervínculos</a> |
+        <a href="pages/PracticaJavaScript.html">Práctica de JavaScript</a> |
+        <a href="pages/PracticaControles.html">Práctica de Controles</a> |
+        <a href="pages/PracticaFormulario.html">Práctica de Formulario</a> |
+        <a href="pages/PracticaFormulario2.html">Práctica de Formulario-2</a> |
+        <a href="pages/PracticaMenuHorizontal.html">Práctica de Menú Horizontal</a> |
+        <a href="pages/PracticaMenuVertical.html">Práctica de Menú Vertical</a> |
+        <a href="pages/PracticaCrazy.html">Práctica de Crazy</a> |<!-- Diseño interactivo Propio "Loco" -->
+        <a href="pages/BootStrap/PracticaBootStrap.html">Práctica BootStrap</a> |
+        <a href="pages/TailWind/PracticaTailWind.html">Práctica TailWind</a> |
+        <a href="pages/TailWind/PracticaTailWind_Black.html">Práctica TailWind - Black</a>
+    </nav>
+    </header>
+
+    <hr>
+
+    <!-- ================ Contenido Principal ================== -->
+    <main>
+        <section>
+            <h2>Descripción de la Práctica</h2>
+            <p>
+                Demostración del uso de las etiquetas <code>&lt;video&gt;</code>, <code>&lt;source&gt;</code>, 
+                <code>&lt;track&gt;</code> e <code>&lt;iframe&gt;</code> para la reproducción de videos locales, 
+                remotos e incrustados desde YouTube, aplicando los atributos recomendados en HTML5.
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- 1. Video desde carpeta local con controles y dimensiones -->
+        <section>
+            <h2>1. Video desde carpeta local (Atributos <code>src</code>, <code>controls</code>, <code>width</code> y <code>height</code>)</h2>
+            <p>Explicación: Carga un archivo de video ubicado en la carpeta local <code>../video/</code> con dimensiones definidas y controles de reproducción.</p>
+            <video controls width="1280" height="720">
+                <source src="../Jose_Gustavo_Moscoso_Ramos_Taller_En_Clase_1/video/video_local.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </section>
+
+        <hr>
+
+        <!-- 2. Video desde una URL externa usando <source> y type -->
+        <section>
+            <h2>2. Video desde una URL externa con &lt;source&gt; y <code>type</code></h2>
+            <p>Explicación: Reproduce un video alojado en un servidor externo especificando su formato MIME mediante <code>&lt;source&gt;</code>.</p>
+            <video controls width="560" height="315">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </section>
+
+        <hr>
+
+        <!-- 3. Video en bucle, silenciado y reproducción automática -->
+        <section>
+            <h2>3. Reproducción automática, silenciada y en bucle (Atributos <code>autoplay</code>, <code>muted</code> y <code>loop</code>)</h2>
+            <p>
+                Explicación: Los navegadores modernos permiten la reproducción automática (<code>autoplay</code>) siempre que el video 
+                esté silenciado (<code>muted</code>). Además, el atributo <code>loop</code> hace que se repita indefinidamente.
+            </p>
+            <video controls autoplay muted loop width="560" height="315">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </section>
+
+        <hr>
+
+        <!-- 4. Video con carátula (poster) y atributo preload -->
+        <section>
+            <h2>4. Video con imagen de carátula y precarga (Atributos <code>poster</code> y <code>preload</code>)</h2>
+            <p>
+                Explicación: El atributo <code>poster</code> muestra una imagen de portada (en este caso nuestra imagen local 
+                <code>Cloud-2.png</code>) antes de que el usuario reproduzca el video, y <code>preload="metadata"</code> optimiza la carga inicial.
+            </p>
+            <video controls preload="metadata" poster="../img/Cloud-2.png" width="560" height="315">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </section>
+
+        <hr>
+
+        <!-- 5. Video con subtítulos usando <track> -->
+        <section>
+            <h2>5. Video con pistas de subtítulos (Etiqueta &lt;track&gt;)</h2>
+            <p>
+                Explicación: La etiqueta <code>&lt;track&gt;</code> permite asociar archivos de subtítulos o leyendas en formato WebVTT (<code>.vtt</code>) 
+                en diferentes idiomas para mejorar la accesibilidad del video.
+            </p>
+            <video controls width="560" height="315">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                <track src="../video/subtitulos_es.vtt" kind="subtitles" srclang="es" label="Español" default>
+                <track src="../video/subtitulos_en.vtt" kind="subtitles" srclang="en" label="English">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+        </section>
+
+        <hr>
+
+        <!-- 6. Video incrustado desde YouTube con <iframe> -->
+        <section>
+            <h2>6. Video incrustado desde YouTube (Etiqueta &lt;iframe&gt;)</h2>
+            <p>
+                Explicación: La etiqueta <code>&lt;iframe&gt;</code> permite incrustar reproductores externos como YouTube directamente en nuestra página. 
+                A continuación se presenta el video recomendado en la asignatura sobre <em>¿Qué es HTML?</em>:
+            </p>
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/10GHKjgQIR0" 
+                title="Reproductor de YouTube: ¿Qué es HTML?" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen
+            ></iframe>
+        </section>
+
+        <hr>
+
+        <p><a href="../index.html">⬅ Volver a la página principal (Inicio)</a></p>
+    </main>
+
+    <hr>
+
+    <!-- ================ Pie de página ================== -->
+    <footer>
+        <p>Desarrollado por: Jose Gustavo Moscoso Ramos</p>
+        <p>
+            Contacto: <a href="mailto:jgmoscos@espol.edu.ec">jgmoscos@espol.edu.ec (Correo)</a> | 
+            <a href="tel:0980463064">0980463064 (Celular)</a>
+        </p>
+        <p>© 2026 Jose Gustavo Moscoso Ramos. Todos los derechos reservados. Sitio desarrollado con fines académicos para la materia de Desarrollo Web - ESPOL.</p>
+    </footer>
+</body>
+
+</html>

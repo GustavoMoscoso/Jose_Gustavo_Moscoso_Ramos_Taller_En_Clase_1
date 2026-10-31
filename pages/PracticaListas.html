@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- ================ Metadatos ================== -->
+    <meta charset="utf-8">
+    <meta name="description" content="Práctica 5: Listas en HTML - Taller 1 de Desarrollo Web">
+    <meta name="keywords" content="HTML, Listas, ol, ul, li, dl, dt, dd, ESPOL">
+    <meta name="author" content="Jose Gustavo Moscoso Ramos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ================ Título e Iconos ================== -->
+    <title>Practica Jose Gustavo Moscoso Ramos - Listas en HTML</title>
+    <link rel="icon" href="../img/icon/Gengar.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- ================ Cabecera y Menú Horizontal ================== -->
+    <header>
+        <h1>Práctica 5: Listas en HTML</h1>
+    <nav>
+        <!--  Lista de navegacion de las prácticas por desarrollar-->
+        <a href="pages/PracticaTexto.html">Práctica de Texto</a> |
+        <a href="pages/PracticaGoogleSite.html">Práctica de Builder (Google Site)</a> |
+        <a href="pages/PracticaTexto.html">Práctica de Builder (Canva)</a> |
+        <a href="ia/PracticaIA.html">Práctica de Inteligencia Artificial</a> |
+        <a href="pages/PracticaListas.html">Práctica de Listas</a> |
+        <a href="pages/PracticaImg.html">Práctica de Imágenes</a> |
+        <a href="pages/PracticaAudio.html">Práctica de Audio</a> |
+        <a href="pages/PracticaVideo.html">Práctica de Video</a> |
+        <a href="pages/PracticaTablas.html">Práctica de Tablas</a> |
+        <a href="pages/PracticaCss.html">Práctica de Css</a> |
+        <a href="pages/PracticaCopyPaste.html">Práctica de CopyPaste</a> |
+        <a href="pages/PracticaHipervinculos.html">Practica de Hipervínculos</a> |
+        <a href="pages/PracticaJavaScript.html">Práctica de JavaScript</a> |
+        <a href="pages/PracticaControles.html">Práctica de Controles</a> |
+        <a href="pages/PracticaFormulario.html">Práctica de Formulario</a> |
+        <a href="pages/PracticaFormulario2.html">Práctica de Formulario-2</a> |
+        <a href="pages/PracticaMenuHorizontal.html">Práctica de Menú Horizontal</a> |
+        <a href="pages/PracticaMenuVertical.html">Práctica de Menú Vertical</a> |
+        <a href="pages/PracticaCrazy.html">Práctica de Crazy</a> |<!-- Diseño interactivo Propio "Loco" -->
+        <a href="pages/BootStrap/PracticaBootStrap.html">Práctica BootStrap</a> |
+        <a href="pages/TailWind/PracticaTailWind.html">Práctica TailWind</a> |
+        <a href="pages/TailWind/PracticaTailWind_Black.html">Práctica TailWind - Black</a>
+    </nav>
+    </header>
+
+    <hr>
+
+    <!-- ================ Contenido Principal ================== -->
+    <main>
+        <section>
+            <h2>Descripción de la Práctica</h2>
+            <p>
+                Demostración funcional de las etiquetas de listas en HTML (<code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, 
+                <code>&lt;li&gt;</code>, <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code> y <code>&lt;dd&gt;</code>) 
+                junto con sus atributos de personalización.
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- 1. Lista no ordenada -->
+        <section>
+            <h2>1. Lista no ordenada (&lt;ul&gt; y &lt;li&gt;)</h2>
+            <p>Agrupa elementos donde el orden secuencial no altera el significado (usa viñetas por defecto):</p>
+            <ul>
+                <li>HTML5 (Estructura)</li>
+                <li>CSS3 (Presentación visual)</li>
+                <li>JavaScript (Interactividad)</li>
+                <li>Git y GitHub (Control de versiones)</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- 2. Lista ordenada -->
+        <section>
+            <h2>2. Lista ordenada (&lt;ol&gt; y &lt;li&gt;)</h2>
+            <p>Enumera elementos que siguen una secuencia o prioridad obligatoria:</p>
+            <ol>
+                <li>Analizar los requerimientos del sitio web.</li>
+                <li>Crear la estructura de carpetas del proyecto.</li>
+                <li>Maquetar los documentos con etiquetas HTML semánticas.</li>
+                <li>Validar que todos los hipervínculos y rutas relativas funcionen.</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <!-- 3. Lista ordenada con inicio personalizado -->
+        <section>
+            <h2>3. Lista ordenada con inicio personalizado (Atributo <code>start</code> y <code>value</code>)</h2>
+            <p>El atributo <code>start="10"</code> indica que la lista empiece en 10, y <code>value="25"</code> salta la numeración en un ítem específico:</p>
+            <ol start="10">
+                <li>Práctica 10: CSS</li>
+                <li>Práctica 11: CopyPaste</li>
+                <li>Práctica 12: Hipervínculos</li>
+                <li value="25">Ítem con salto personalizado al número 25 usando el atributo value</li>
+                <li>Ítem consecutivo (número 26)</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <!-- 4. Lista con letras -->
+        <section>
+            <h2>4. Lista ordenada con letras (Atributo <code>type="A"</code> y <code>type="a"</code>)</h2>
+            <h3>Letras mayúsculas (type="A"):</h3>
+            <ol type="A">
+                <li>Cabecera del documento (&lt;header&gt;)</li>
+                <li>Cuerpo principal (&lt;main&gt;)</li>
+                <li>Pie de página (&lt;footer&gt;)</li>
+            </ol>
+
+            <h3>Letras minúsculas (type="a"):</h3>
+            <ol type="a">
+                <li>Nombre del estudiante</li>
+                <li>Correo electrónico institucional</li>
+                <li>Referencia de copyright académico</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <!-- 5. Lista con números romanos -->
+        <section>
+            <h2>5. Lista con números romanos (Atributo <code>type="I"</code> y <code>type="i"</code>)</h2>
+            <h3>Números romanos en mayúsculas (type="I"):</h3>
+            <ol type="I">
+                <li>Unidad I: Estructura y estilo de un documento web</li>
+                <li>Unidad II: Diseño web adaptable (Responsive)</li>
+                <li>Unidad III: Programación del lado del cliente</li>
+            </ol>
+
+            <h3>Números romanos en minúsculas (type="i"):</h3>
+            <ol type="i">
+                <li>Subtema i: Estructura global</li>
+                <li>Subtema ii: Semántica HTML5</li>
+                <li>Subtema iii: Video y Audio</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <!-- 6. Lista con viñetas personalizadas -->
+        <section>
+            <h2>6. Lista con viñetas personalizadas en HTML (Atributo <code>type</code> en &lt;ul&gt;)</h2>
+            <h3>Viñeta cuadrada (type="square"):</h3>
+            <ul type="square">
+                <li>Computadora de escritorio (PC)</li>
+                <li>Servidor en la nube</li>
+                <li>Sistema de alimentación ininterrumpida (UPS)</li>
+            </ul>
+
+            <h3>Viñeta circular vacía (type="circle"):</h3>
+            <ul type="circle">
+                <li>Laptop portátil</li>
+                <li>Smartphone táctil</li>
+                <li>Router / Dispositivo de red</li>
+            </ul>
+
+            <h3>Viñeta de disco relleno (type="disc"):</h3>
+            <ul type="disc">
+                <li>Computador All in One</li>
+                <li>Celular con teclado físico</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- 7. Lista anidada -->
+        <section>
+            <h2>7. Lista anidada (Combinación de listas dentro de listas)</h2>
+            <p>Permite representar jerarquías como la estructura de carpetas de nuestro taller:</p>
+            <ul>
+                <li>Directorio Raíz (Moscoso_Ramos_Tll_1)
+                    <ul>
+                        <li>audio/</li>
+                        <li>css/</li>
+                        <li>img/
+                            <ol>
+                                <li>Cloud-2.png</li>
+                                <li>icon/Gengar.ico</li>
+                            </ol>
+                        </li>
+                        <li>Pages/
+                            <ol type="a">
+                                <li>Copy_Paste/</li>
+                                <li>IA/</li>
+                                <li>Nube/ (8 dispositivos mapeados)</li>
+                            </ol>
+                        </li>
+                        <li>video/</li>
+                    </ul>
+                </li>
+                <li>index.html</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- 8. Lista ordenada descendente -->
+        <section>
+            <h2>8. Lista ordenada descendente (Atributo booleano <code>reversed</code>)</h2>
+            <p>Invierte el orden de la numeración de mayor a menor (ideal para conteos regresivos o rankings):</p>
+            <ol reversed>
+                <li>Fase 5: Despliegue y entrega del archivo .rar</li>
+                <li>Fase 4: Pruebas de navegación e hipervínculos</li>
+                <li>Fase 3: Inserción de recursos multimedia</li>
+                <li>Fase 2: Codificación de páginas en HTML</li>
+                <li>Fase 1: Planificación de la estructura del directorio</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <!-- 9. Lista de definición -->
+        <section>
+            <h2>9. Lista de definición (&lt;dl&gt;, &lt;dt&gt; y &lt;dd&gt;)</h2>
+            <p>Se utiliza para glosarios de términos técnicos, donde <code>&lt;dt&gt;</code> es el término y <code>&lt;dd&gt;</code> su definición:</p>
+            <dl>
+                <dt><strong>HTML (HyperText Markup Language)</strong></dt>
+                <dd>Lenguaje de marcado estándar utilizado para estructurar y desplegar páginas web y sus contenidos.</dd>
+
+                <dt><strong>Ruta Relativa</strong></dt>
+                <dd>Dirección que indica la ubicación de un archivo tomando como punto de partida la carpeta del documento actual.</dd>
+
+                <dt><strong>Etiqueta Semántica</strong></dt>
+                <dd>Elemento de HTML5 que describe claramente su significado tanto para el navegador como para el desarrollador (por ejemplo: &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;footer&gt;).</dd>
+            </dl>
+        </section>
+
+        <hr>
+
+        <p><a href="../index.html">⬅ Volver a la página principal (Inicio)</a></p>
+    </main>
+
+    <hr>
+
+    <!-- ================ Pie de página ================== -->
+    <footer>
+        <p>Desarrollado por: Jose Gustavo Moscoso Ramos</p>
+        <p>
+            Contacto: <a href="mailto:jgmoscos@espol.edu.ec">jgmoscos@espol.edu.ec (Correo)</a> | 
+            <a href="tel:0980463064">0980463064 (Celular)</a>
+        </p>
+        <p>© 2026 Jose Gustavo Moscoso Ramos. Todos los derechos reservados. Sitio desarrollado con fines académicos para la materia de Desarrollo Web - ESPOL.</p>
+    </footer>
+</body>
+
+</html>
