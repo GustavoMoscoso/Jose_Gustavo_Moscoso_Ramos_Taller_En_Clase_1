@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <!-- Define la codificación para caracteres especiales -->
+  <meta charset="UTF-8">
+
+  <!-- Permite diseño adaptable en celulares, tablets y escritorio -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título del documento -->
+  <title>GGspol HUB - Tailwind</title>
+
+  <!-- CDN de Tailwind para práctica en navegador -->
+  <!-- Según la documentación, este método es para desarrollo, no para producción -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Barra de navegación hecha con utilidades de Tailwind -->
+  <nav class="bg-gray-900 text-white">
+    <!-- max-w-6xl limita el ancho máximo -->
+    <!-- mx-auto centra el contenido -->
+    <!-- px-4 agrega espacio horizontal -->
+    <!-- py-4 agrega espacio vertical -->
+    <div class="max-w-6xl mx-auto px-4 py-4">
+      <!-- flex organiza elementos en fila -->
+      <!-- flex-col en celular coloca los elementos en columna -->
+      <!-- md:flex-row desde pantalla mediana los coloca en fila -->
+      <!-- justify-between separa marca y menú -->
+      <!-- gap-4 agrega separación entre elementos -->
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <a href="#" class="text-2xl font-bold">GGspol HUB</a>
+
+        <!-- Menú de navegación -->
+        <div class="flex flex-col md:flex-row gap-3 md:gap-6">
+          <a href="#" class="hover:text-yellow-300">Inicio</a>
+          <a href="#actividades" class="hover:text-yellow-300">Actividades</a>
+          <a href="#contacto" class="hover:text-yellow-300">Contactanos</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección principal -->
+  <header class="bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-12">
+      <!-- grid crea una cuadrícula -->
+      <!-- grid-cols-1 usa una columna en celular -->
+      <!-- md:grid-cols-2 usa dos columnas desde pantalla mediana -->
+      <!-- gap-8 agrega separación entre columnas -->
+      <!-- items-center alinea verticalmente -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <!-- text-4xl cambia el tamaño del texto -->
+          <!-- font-bold aplica negrita -->
+          <!-- mb-4 agrega margen inferior -->
+          <h1 class="text-4xl font-bold mb-4">Bienvenido Al portal de GGspol HUB</h1>
+
+          <!-- text-lg aumenta el tamaño del párrafo -->
+          <!-- text-gray-600 aplica color gris -->
+          <p class="text-lg text-gray-600 mb-6">
+            Consulta nuestras actividades y únete a nuestra comunidad de gamers y desarrolladores. Aquí encontrarás torneos, desarrollo de videojuegos y mucho más.
+          </p>
+
+
+
+
+          <!-- Botón con clases utilitarias -->
+          <a href="#actividades" class="inline-block bg-yellow-500 text-gray-900 px-5 py-3 rounded-lg font-semibold hover:bg-yellow-400">
+            Ver actividades
+          </a>
+
+        </div>
+
+        <div>
+          <!-- w-full ocupa todo el ancho disponible -->
+          <!-- rounded-xl redondea bordes -->
+          <!-- shadow-lg agrega sombra -->
+          <img src="https://ggspolhub.42web.io/assets/img/inaguracionTorneoInterfacultades/fotoGrupalTodosLosAsistentes.jpg" class="w-full rounded-xl shadow-lg" alt="Club de videojuegos">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sección de productos -->
+  <main id="actividades" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold text-center mb-8">Actividades Del Club</h2>
+
+    <!-- Grilla responsive -->
+    <!-- Una columna en celular -->
+    <!-- Dos columnas desde md -->
+    <!-- Tres columnas desde lg -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Tarjeta 1 -->
+      <article class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img src="https://ggspolhub.42web.io/assets/img/interUniversitario/partidaInterUniversitario1.jpg" class="w-full h-48 object-cover" alt="Torneo de videojuegos">
+
+        <div class="p-5">
+          <h3 class="text-xl font-bold mb-2">Torneos</h3>
+          <p class="text-gray-600 mb-3">Torneos E-sports de los juegos que mas te gusten.</p>
+          <p class="font-bold mb-4">Activo</p>
+          <a href="#contacto" class="inline-block border border-yellow-500 text-yellow-700 px-4 py-2 rounded-lg hover:bg-yellow-500 hover:text-gray-900">
+            Entrar
+          </a>
+        </div>
+      </article>
+
+      <!-- Tarjeta 2 -->
+      <article class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img src="https://ggspolhub.42web.io/assets/img/gameJamPlus/fotoGrupoGameJamPlus.jpg" class="w-full h-48 object-cover" alt="Desarrollo de videojuegos">
+
+        <div class="p-5">
+          <h3 class="text-xl font-bold mb-2">Desarrollo de Videojuegos</h3>
+          <p class="text-gray-600 mb-3">Aprende a crear videojuegos con las últimas tecnologías.</p>
+          <p class="font-bold mb-4">Activo</p>
+          <a href="#contacto" class="inline-block border border-yellow-500 text-yellow-700 px-4 py-2 rounded-lg hover:bg-yellow-500 hover:text-gray-900">
+            Entrar
+          </a>
+        </div>
+      </article>
+
+
+
+      <!-- Tarjeta 3 -->
+      <article class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img src="https://ggspolhub.42web.io/assets/img/inaguracionTorneoInterfacultades/exposicionTorneoInterfacultades.jpg" class="w-full h-48 object-cover" alt="Modding y Software Libre">
+
+        <div class="p-5">
+          <h3 class="text-xl font-bold mb-2">Modding y Software Libre</h3>
+          <p class="text-gray-600 mb-3">Aprende a modificar juegos y utilizar software libre.</p>
+          <p class="font-bold mb-4">Activo</p>
+          <a href="#contacto" class="inline-block border border-yellow-500 text-yellow-700 px-4 py-2 rounded-lg hover:bg-yellow-500 hover:text-gray-900">
+            Entrar
+          </a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Formulario de contacto -->
+  <section id="contacto" class="max-w-4xl mx-auto px-4 pb-12">
+    <h2 class="text-3xl font-bold text-center mb-8">Formulario de contacto</h2>
+
+    <!-- bg-white da fondo blanco -->
+    <!-- p-6 agrega espacio interno -->
+    <!-- rounded-xl redondea bordes -->
+    <!-- shadow-md agrega sombra -->
+    <form class="bg-white p-6 rounded-xl shadow-md">
+      <!-- Campo nombre -->
+      <div class="mb-4">
+        <label for="nombre" class="block font-semibold mb-2">Nombre</label>
+        <input type="text" id="nombre" class="w-full border border-gray-300 rounded-lg px-4 py-2" placeholder="Ingrese su nombre">
+      </div>
+
+      <!-- Campo correo -->
+      <div class="mb-4">
+        <label for="correo" class="block font-semibold mb-2">Correo electrónico</label>
+        <input type="email" id="correo" class="w-full border border-gray-300 rounded-lg px-4 py-2" placeholder="correo@ejemplo.com">
+      </div>
+
+      <!-- Campo producto -->
+      <div class="mb-4">
+        <label for="producto" class="block font-semibold mb-2">Area de Interes</label>
+        <select id="producto" class="w-full border border-gray-300 rounded-lg px-4 py-2">
+          <option>Seleccione una opción</option>
+          <option>Torneos de videojuegos</option>
+          <option>Desarrollo de software</option>
+          <option>Modding de juegos</option>
+        </select>
+      </div>
+
+      <!-- Campo mensaje -->
+      <div class="mb-4">
+        <label for="mensaje" class="block font-semibold mb-2">Mensaje</label>
+        <textarea id="mensaje" rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-2" placeholder="Escriba su mensaje"></textarea>
+      </div>
+
+      <!-- Botón -->
+      <button type="submit" class="bg-gray-900 text-white px-5 py-3 rounded-lg hover:bg-gray-700">
+        Enviar
+      </button>
+    </form>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="bg-gray-900 text-white text-center py-4">
+    <p>GGspol HUB - Sitio desarrollado con Tailwind CSS</p>
+  </footer>
+</body>
+</html>
