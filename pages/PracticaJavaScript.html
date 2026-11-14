@@ -1,81 +1,273 @@
-<!DOCTYPE html>
-<html lang="es">
 
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
 <head>
-    <!-- Todas las páginas que desarrolle, deben tener la misma estructura-->
+    <meta charset="UTF-8">
+    <title>JavaScript: cálculo de alquiler | GGspolHUB</title>
+	<!-- Todas las páginas que desarrolle, deben tener la misma estructura-->
     <!-- MetaData-->
     <!-- Página principal de las practicas-->
     <!-- ================ metadatos================== -->
-    <meta charset="utf-8">
 	<!-- La escritura de caracteres especiales áéíóú ñ-->
     <meta name="description" content="practicas-- img,html,css,js"><!-- -->
     <meta name="keywords" content="HTM, CSS, JavaScript"><!-- -->
     <meta name="author" content="Gustavo"><!-- -->
-    <!--<meta http-equiv="refresh" content="10"><!-- -->-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../css/styleGeneral.css">
-    <!-- ================ Título e Iconos================== -->
-	
-    <!-- Todas las páginas que Desarrollemos en práctica deberan tener Título-->
-    <title>Práctica de JavaScript Jose Gustavo Moscoso Ramos </title>
-    <!-- Todas las páginas que Desarrollemos en práctica deberan tener íconos-->
-    <link rel="icon" href="../img/icon/Gengar.ico" type="image/x-icon">
 	<!-- Esrto no se deberia hacer, por que al ser un proceso en cascada se cargaria antes que hacer el HTML-->
 	<!--<script src="../js/JavaScript.js"> </script>-->
+    <link rel="icon" href="../img/icon/Alakazam.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <link rel="stylesheet" href="../css/styleMenuPracticas.css">
+    <script src="../js/menuPracticas.js" defer></script>
 </head>
+<body class="bootstrap-site">
 
-<body>
-    <!-- Etiquetas semanticas.- debe de utilizarlas y potenciar su trabajo web -->
-    <hr>
-    <!-- ================ Contenido Principal ================== -->
-    <nav>
-        <!--  Lista de navegacion de las prácticas por desarrollar-->
-        <a href="../pages/PracticaTexto.html">Práctica de Texto</a> |
-        <a href="../pages/PracticaGoogleSite.html">Práctica de Builder (Google Site)</a> |
-        <a href="../pages/PracticaTexto.html">Práctica de Builder (Canva)</a> |
-        <a href="../ia/PracticaIA.html">Práctica de Inteligencia Artificial</a> |
-        <a href="../pages/PracticaListas.html">Práctica de Listas</a> |
-        <a href="../pages/PracticaImg.html">Práctica de Imágenes</a> |
-        <a href="../pages/PracticaAudio.html">Práctica de Audio</a> |
-        <a href="../pages/PracticaVideo.html">Práctica de Video</a> |
-        <a href="../pages/PracticaTablas.html">Práctica de Tablas</a> |
-        <a href="../pages/PracticaCss.html">Práctica de Css</a> |
-        <a href="../pages/PracticaCopyPaste.html">Práctica de CopyPaste</a> |
-        <a href="../pages/PracticaHipervinculos.html">Practica de Hipervínculos</a> |
-        <a href="../pages/PracticaJavaScript.html">Práctica de JavaScript</a> |
-        <a href="../pages/PracticaControles.html">Práctica de Controles</a> |
-        <a href="../pages/PracticaFormulario.html">Práctica de Formulario</a> |
-        <a href="../pages/PracticaFormulario2.html">Práctica de Formulario-2</a> |
-        <a href="../pages/PracticaMenuHorizontal.html">Práctica de Menú Horizontal</a> |
-        <a href="../pages/PracticaMenuVertical.html">Práctica de Menú Vertical</a> |
-        <a href="../pages/PracticaCrazy.html">Práctica de Crazy</a> |<!-- Diseño interactivo Propio "Loco" -->
-        <a href="../pages/BootStrap/PracticaBootStrap.html">Práctica BootStrap</a> |
-        <a href="../pages/TailWind/PracticaTailWind.html">Práctica TailWind</a> |
-        <a href="../pages/TailWind/PracticaTailWind_Black.html">Práctica TailWind - Black</a>
-    </nav>
-	
-	<p id="mensaje">Texto original</p>
+    <header class="container py-4">
+        <h1>Práctica 13: JavaScript</h1>
+        <nav class="practice-menu" data-practice-menu aria-label="Navegacion entre practicas">
+            <button type="button" class="practice-menu-toggle" data-practice-toggle aria-controls="practice-links-practicajavascript" aria-expanded="true" hidden>Menu de practicas</button>
+            <div class="practice-menu-links" data-practice-links id="practice-links-practicajavascript">
+                <a href="../index.html">Inicio</a>
+                <a href="../pages/PracticaTexto.html" class="btn btn-outline-secondary btn-sm">Práctica de Texto</a>
+                <a href="../pages/PracticaGoogleSite.html" class="btn btn-outline-secondary btn-sm">Práctica de Builder (Google Site)</a>
+                <a href="../pages/PracticaCanvas.html" class="btn btn-outline-secondary btn-sm">Práctica de Builder (Canva)</a>
+                <a href="../ia/PracticaIA.html" class="btn btn-outline-secondary btn-sm">Práctica de Inteligencia Artificial</a>
+                <a href="../pages/PracticaListas.html" class="btn btn-outline-secondary btn-sm">Práctica de Listas</a>
+                <a href="../pages/PracticaImg.html" class="btn btn-outline-secondary btn-sm">Práctica de Imágenes</a>
+                <a href="../pages/PracticaAudio.html" class="btn btn-outline-secondary btn-sm">Práctica de Audio</a>
+                <a href="../pages/PracticaVideo.html" class="btn btn-outline-secondary btn-sm">Práctica de Video</a>
+                <a href="../pages/PracticaTablas.html" class="btn btn-outline-secondary btn-sm">Práctica de Tablas</a>
+                <a href="../pages/PracticaCss.html" class="btn btn-outline-secondary btn-sm">Práctica de Css</a>
+                <a href="../pages/PracticaCopyPaste.html" class="btn btn-outline-secondary btn-sm">Práctica de CopyPaste</a>
+                <a href="../pages/PracticaHipervinculos.html" class="btn btn-outline-secondary btn-sm">Practica de Hipervínculos</a>
+                <a aria-current="page" href="../pages/PracticaJavaScript.html" class="btn btn-outline-secondary btn-sm">Práctica de JavaScript</a>
+                <a href="../pages/PracticaControles.html" class="btn btn-outline-secondary btn-sm">Práctica de Controles</a>
+                <a href="../pages/PracticaFormulario.html" class="btn btn-outline-secondary btn-sm">Práctica de Formulario</a>
+                <a href="../pages/PracticaAjax.html" class="btn btn-outline-secondary btn-sm">Práctica de Ajax</a>
+                <a href="../pages/PracticaMenuHorizontal.html" class="btn btn-outline-secondary btn-sm">Práctica de Menú Horizontal</a>
+                <a href="../pages/PracticaMenuVertical.html" class="btn btn-outline-secondary btn-sm">Práctica de Menú Vertical</a>
+                <a href="../pages/BootStrap/PracticaBootStrap.html" class="btn btn-outline-secondary btn-sm">Práctica BootStrap</a>
+                <a href="../pages/TailWind/PracticaTailWind.html" class="btn btn-outline-secondary btn-sm">Práctica TailWind</a>
+            </div>
+        </nav>
+    </header>
 
-	<button onclick="alert('hola')">Boton</button>
+    <main class="container py-4">
+    <div class="card card-body mb-4">
+    <h1>Registro de alquiler - VideoClub Xelula</h1>
+
+    <h2>Datos de la película</h2>
+
+    <label for="pelicula" class="form-label">Título de la película:</label>
+    <input type="text" id="pelicula" placeholder="Ejemplo: Cars" class="form-control">
+    <p>Película escrita: <span id="vistaPelicula">Ninguna</span></p>
+
+    <br>
+
+    <label for="genero" class="form-label">Género:</label>
+    <select id="genero" class="form-select">
+        <option value="">Seleccione un género</option>
+        <option value="Animación">Animación</option>
+        <option value="Acción">Acción</option>
+        <option value="Comedia">Comedia</option>
+        <option value="Terror">Terror</option>
+        <option value="Aventura">Aventura</option>
+    </select>
+
+    <br><br>
+
+    <label for="precio" class="form-label">Precio de alquiler por día:</label>
+    <input type="number" id="precio" step="0.01"
+           placeholder="Ejemplo: 1.50" class="form-control">
+
+    <br><br>
+
+    <label for="dias" class="form-label">Días de alquiler:</label>
+    <input type="number" id="dias" step="1"
+           placeholder="Ejemplo: 3" class="form-control">
+
+    <br><br>
+
+    <label for="descuento" class="form-label">Aplicar descuento del 10%:</label>
+    <input type="checkbox" id="descuento" class="form-check-input">
+
+    <br><br>
+
+    <button id="btnCalcular" class="btn btn-primary">Calcular alquiler</button>
+    <button id="btnLimpiar" class="btn btn-outline-danger">Limpiar</button>
+
+    <h2>Resultado del alquiler</h2>
+
+    <p id="mensaje" class="alert alert-info mt-3" role="status">Ingrese los datos y calcule el alquiler.</p>
+
+    <p>Película: <span id="resultadoPelicula">---</span></p>
+    <p>Género: <span id="resultadoGenero">---</span></p>
+    <p>Días de alquiler: <span id="resultadoDias">0</span></p>
+    <p>Subtotal: $<span id="resultadoSubtotal">0.00</span></p>
+    <p>Descuento: $<span id="resultadoDescuento">0.00</span></p>
+    <p>Total a pagar: $<span id="resultadoTotal">0.00</span></p>
+    </div>
 
 
-    <!-- ================ Pie de página ================== -->
-    <footer>
+	<section id="preguntas-taller" class="preguntas-taller card card-body mb-4">
+    <header class="encabezado-preguntas container py-4">
+        <p>SOFG1006 – Desarrollo de Aplicaciones Web y Móviles</p>
+        <h2>Preguntas sobre JavaScript</h2>
+    </header>
+
+    <ol class="lista-preguntas">
+        <li>
+            <h3>¿Qué diferencia hay entre <code>let</code> y <code>const</code> en este ejercicio?</h3>
+
+            <ul>
+                <li>
+                    <code>let</code> se usa para variables cuyo valor puede cambiar durante
+                    la ejecución, por ejemplo: <code>subtotal</code>, <code>total</code>,
+                    <code>precioUnitario</code> o <code>cantidadProducto</code>.
+                </li>
+
+                <li>
+                    <code>const</code> se usa para valores o referencias que no serán
+                    reasignados, por ejemplo los elementos obtenidos con
+                    <code>getElementById</code> o la constante
+                    <code>PORCENTAJE_DESCUENTO</code>.
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <h3>¿Por qué <code>precio.value</code> debe convertirse con <code>Number()</code>?</h3>
+
+            <p>
+                Porque <code>precio.value</code> obtiene el dato como texto, aunque el
+                elemento <code>input</code> sea de tipo <code>number</code>. Para poder
+                hacer operaciones matemáticas correctamente, el valor se convierte a
+                número usando <code>Number()</code>.
+            </p>
+        </li>
+
+        <li>
+            <h3>¿Qué tipo de dato devuelve <code>descuento.checked</code>?</h3>
+
+            <p><code>descuento.checked</code> devuelve un dato booleano:</p>
+
+            <ul>
+                <li>
+                    <code>true</code>, si el checkbox está marcado.
+                </li>
+
+                <li>
+                    <code>false</code>, si el checkbox no está marcado.
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <h3>¿Qué función se encarga de calcular el subtotal?</h3>
+
+            <pre><code>function calcularSubtotal(precioUnitario, cantidadProducto) {
+    return precioUnitario * cantidadProducto;
+}</code></pre>
+
+            <p>
+                La función recibe el precio unitario y la cantidad del producto. Después,
+                multiplica ambos valores y retorna el subtotal.
+            </p>
+        </li>
+
+        <li>
+            <h3>¿Qué función retorna un objeto?</h3>
+
+            <pre><code>function crearObjetoVenta(
+    nombreProducto,
+    nombreCategoria,
+    subtotal,
+    valorDescuento,
+    total
+) {
+    let venta = {
+        producto: nombreProducto,
+        categoria: nombreCategoria,
+        subtotal: subtotal,
+        descuento: valorDescuento,
+        total: total
+    };
+
+    return venta;
+}</code></pre>
+
+            <p>
+                La función <code>crearObjetoVenta()</code> crea un objeto llamado
+                <code>venta</code> y lo devuelve mediante la instrucción
+                <code>return</code>.
+            </p>
+        </li>
+
+        <li>
+            <h3>¿Qué evento permite actualizar el nombre del producto mientras se escribe?</h3>
+
+            <ul>
+                <li>
+                    El evento <code>input</code>.
+                </li>
+
+                <li>
+                    Este evento se ejecuta cada vez que el usuario escribe, borra o
+                    modifica el contenido del campo.
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <h3>¿Qué método se usa para seleccionar elementos por id?</h3>
+
+            <pre><code>document.getElementById("id_del_elemento");</code></pre>
+
+            <p>
+                El método <code>getElementById()</code> permite obtener un elemento HTML
+                mediante el valor de su atributo <code>id</code>.
+            </p>
+        </li>
+
+        <li>
+            <h3>¿Por qué se usa <code>textContent</code> para mostrar resultados?</h3>
+
+            <ul>
+                <li>
+                    Porque <code>textContent</code> permite cambiar el texto visible de
+                    un elemento HTML desde JavaScript.
+                </li>
+
+                <li>
+                    Se utiliza para mostrar resultados como el producto, la categoría,
+                    el subtotal, el descuento y el total sin recargar la página.
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <h3>¿Qué ocurre si el precio ingresado es 0?</h3>
+
+            <p>
+                La función <code>validarDatos()</code> detecta que el precio no es válido,
+                porque debe ser mayor que <code>0</code>.
+            </p>
+
+        </li>
+    </ol>
+    </section>
+    </main>
+	<!-- ================ Pie de página ================== -->
+    <footer class="container py-4 border-top text-center">
         <p>Desarrollado por: Jose Gustavo Moscoso Ramos</p>
         <p>
-            <a href="correo: jgmoscos@espol.edu.ec">Correo</a>
-            <a href="numero: 0980463064">Celular</a>
+            <a href="mailto:jgmoscos@espol.edu.ec">Correo</a>
+            <a href="tel:0980463064">Celular</a>
         </p>
         <p> © 2025 - Página de practicas académicas ESPOL</p>
     </footer>
-    <!-- Contadores de visitas-->
-    <!-- El contador solo en la página principal-->
-	<script src="../js/JavaScript.js"> </script>
-	<script>
-		const parrafo = document.getElementById("mensaje");
-		parrafo.textContent = "Texto modificado con JavaScript";
-	</script>
-	<button onclick="alert('Hola')">Presiona</button>
+    <script src="../js/JavaScript.js"></script>
+    <script src="../js/vendor/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

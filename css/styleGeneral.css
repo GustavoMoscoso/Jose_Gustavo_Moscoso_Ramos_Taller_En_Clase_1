@@ -318,6 +318,61 @@ button:hover {
     transform: translateY(-1px);
 }
 
+/* Bootstrap se personaliza solo en paginas migradas; las practicas CSS conservan su aspecto. */
+.bootstrap-site {
+    --bs-body-bg: var(--bg-main);
+    --bs-body-color: var(--text-primary);
+    --bs-secondary-color: var(--text-secondary);
+    --bs-tertiary-color: var(--text-muted);
+    --bs-border-color: var(--border-color);
+    --bs-link-color: var(--accent-ice);
+    --bs-link-hover-color: var(--accent-steel);
+    --bs-tertiary-bg: var(--bg-surface);
+    overflow-wrap: break-word;
+}
+.bootstrap-site .card, .bootstrap-site .list-group-item, .bootstrap-site .modal-content {
+    --bs-card-bg: var(--bg-surface);
+    --bs-card-border-color: var(--border-color);
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+}
+.bootstrap-site .btn-primary {
+    --bs-btn-bg: #46688f;
+    --bs-btn-border-color: #46688f;
+    --bs-btn-hover-bg: #365473;
+    --bs-btn-hover-border-color: #365473;
+    --bs-btn-active-bg: #365473;
+    color: #fff;
+    background-color: var(--bs-btn-bg);
+}
+.bootstrap-site .btn-outline-light { background: transparent; color: var(--text-primary); }
+.bootstrap-site .btn-info { --bs-btn-bg: var(--accent-ice); --bs-btn-border-color: var(--accent-ice); background-color: var(--accent-ice); color: var(--bg-main); }
+.bootstrap-site .btn-info:hover { background-color: var(--accent-steel); border-color: var(--accent-steel); color: var(--bg-main); }
+.bootstrap-site .btn-outline-danger { background: transparent; color: #ea868f; }
+.bootstrap-site .btn-outline-secondary { background: transparent; color: var(--text-secondary); border-color: var(--border-color); }
+.bootstrap-site .btn-primary:hover { background-color: var(--bs-btn-hover-bg); color: #fff; }
+.bootstrap-site .btn-outline-secondary:hover, .bootstrap-site .btn-outline-light:hover { background-color: #365473; color: #fff; }
+.bootstrap-site .bg-primary { background-color: #365473 !important; }
+.bootstrap-site .text-primary { color: var(--accent-ice) !important; }
+.bootstrap-site .btn:hover { transform: none; }
+.bootstrap-site .nav-link { color: var(--accent-ice); }
+.bootstrap-site .nav-link.active { background: #365473; color: #fff; }
+.bootstrap-site .form-control, .bootstrap-site .form-select {
+    background-color: var(--bg-elevated); color: var(--text-primary); border-color: var(--border-color);
+}
+.bootstrap-site .form-control::placeholder { color: var(--text-muted); }
+.bootstrap-site .form-check-input { padding: 0; }
+.bootstrap-site .table { --bs-table-bg: var(--bg-surface); --bs-table-color: var(--text-primary); --bs-table-border-color: var(--border-color); }
+.bootstrap-site .navbar { border-top: 0; }
+.bootstrap-site nav a:hover { text-decoration: none; }
+.bootstrap-site :focus-visible { outline: 3px solid var(--accent-ice); outline-offset: 3px; }
+.bootstrap-site section.card:not(.card-body), .bootstrap-site article.card:not(.card-body) { padding: 0; }
+.bootstrap-site img[usemap] { max-width: none; }
+.bootstrap-site .navbar-nav { margin-bottom: 0; }
+.bootstrap-site .navbar-nav .nav-item { margin-bottom: 0; }
+.bootstrap-site .navbar-brand { white-space: normal; }
+.bootstrap-site .table-responsive { max-width: 100%; }
+
 /* ================= 9. Adaptabilidad Responsive ================= */
 @media (max-width: 768px) {
     header, section, article, footer {

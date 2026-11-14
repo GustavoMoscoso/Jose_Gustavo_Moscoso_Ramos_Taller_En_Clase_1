@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Práctica de menú vertical con CSS Grid, control accesible y Bootstrap local. José Gustavo Moscoso Ramos, ESPOL.">
+    <meta name="author" content="José Gustavo Moscoso Ramos">
+    <title>Menú vertical | GGspolHUB</title>
+    <link rel="icon" href="../img/icon/Blastoise.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <link rel="stylesheet" href="../css/styleNavegacion.css">
+    <script src="../js/vendor/bootstrap.bundle.min.js" defer></script>
+    <script src="../js/navegacion.js" defer></script>
+</head>
+<body class="bootstrap-site">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-toolbar sidebar-toolbar">
+        <button class="sidebar-toggle btn btn-outline-light" type="button" aria-controls="menuVertical" aria-expanded="true" data-sidebar-toggle><span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span><span class="visually-hidden">Alternar menú vertical</span></button>
+        <a class="site-brand" href="../index.html">JGM<span> / WEB LAB</span></a><span class="toolbar-note">ESPOL / SOFG1006</span>
+    </header>
+    <!-- La misma grilla y el mismo controlador que utiliza el inicio. -->
+    <div class="dashboard" data-sidebar-layout>
+        <aside class="practice-sidebar" id="menuVertical" aria-label="Menú vertical de demostración">
+            <div class="sidebar-heading"><span class="eyebrow">03 / Interfaces</span><p>Menú vertical</p></div>
+            <nav class="practice-nav" aria-label="Destinos y secciones">
+                <div class="nav-group"><h2>Páginas</h2><ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="PracticaMenuHorizontal.html">Menú horizontal</a></li>
+                    <li><a href="PracticaMenuVertical.html" aria-current="page">Menú vertical</a></li>
+                </ul></div>
+                <div class="nav-group"><h2>En esta práctica</h2><ul>
+                    <li><a href="#concepto">Concepto</a></li>
+                    <li><a href="#comportamiento">Comportamiento</a></li>
+                    <li><a href="#accesibilidad">Accesibilidad</a></li>
+                </ul></div>
+                <div class="nav-group"><h2>Continuar</h2><ul><li><a href="PracticaCss.html">CSS</a></li><li><a href="BootStrap/PracticaBootStrap.html">Bootstrap</a></li></ul></div>
+            </nav>
+        </aside>
+        <main class="dashboard-content" id="contenido" tabindex="-1">
+            <section class="portfolio-hero" aria-labelledby="titulo"><p class="eyebrow">03 / Diseño e interfaces</p><h1 id="titulo">Un índice al lado.<br><span>Más espacio al leer.</span></h1><p class="hero-lead">Este menú es una columna del documento, no una capa sobre el contenido. Abre y cierra el panel con el botón superior para comprobar cómo cambia el ancho de lectura.</p><a class="btn btn-info" href="#comportamiento">Explorar el comportamiento</a></section>
+            <section class="demo-section" id="concepto"><h2>El concepto</h2><p>La navegación vertical agrupa destinos de forma ordenada y admite más opciones que una barra horizontal. Es el patrón utilizado en el inicio para organizar las prácticas por tema.</p><p>El índice se mantiene a la izquierda y el contenido utiliza el espacio restante a la derecha.</p></section>
+            <section class="demo-section" id="comportamiento"><h2>Un espacio que se adapta</h2><p>CSS Grid distribuye el panel y el contenido en dos columnas. Al cerrar el menú, la columna lateral desaparece y el contenido recupera el ancho disponible.</p><p>En pantallas menores de 768 px el panel empieza cerrado. Si se abre, ocupa el 42 % del ancho: los textos se ajustan dentro de cada columna sin superponerse.</p><p>La barra de controles permanece visible al desplazarte. El menú lateral se mantiene junto al contenido y tiene desplazamiento independiente cuando sus enlaces superan la altura disponible.</p></section>
+            <section class="demo-section" id="accesibilidad"><h2>Control con teclado</h2><ul><li>Tab permite llegar al botón y a todos los enlaces visibles.</li><li>Enter o Espacio alternan el panel desde el botón.</li><li>Escape cierra el panel abierto y devuelve el foco al botón.</li><li>El estado se comunica con <code>aria-expanded</code>; al cerrar, <code>hidden</code> retira los enlaces del recorrido de teclado.</li></ul><a href="../index.html">Volver a todas las prácticas &rarr;</a></section>
+        </main>
+    </div>
+    <footer class="site-footer"><p>José Gustavo Moscoso Ramos / ESPOL / SOFG1006</p><p>&copy; 2026. Práctica de navegación vertical y distribución adaptable.</p></footer>
+</body>
+</html>

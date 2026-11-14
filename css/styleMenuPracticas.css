@@ -1,0 +1,60 @@
+/* Solo afecta al menu compartido, incluso en la practica de CSS sin Bootstrap. */
+.practice-menu {
+    display: block;
+    margin-top: 1rem;
+    padding-top: .85rem;
+    border-top: 1px solid var(--border-color, #334155);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.5;
+}
+.practice-menu *, .practice-menu *::before, .practice-menu *::after { box-sizing: border-box; }
+.practice-menu .practice-menu-links { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.practice-menu .practice-menu-links > a {
+    display: block;
+    max-width: 100%;
+    margin: 0;
+    padding: .5rem .75rem;
+    border: 1px solid var(--border-color, #334155);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--text-secondary, #cbd5e1);
+    font-size: .875rem;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+.practice-menu .practice-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem;
+    width: 100%;
+    min-height: 48px;
+    margin: 0;
+    padding: .65rem .85rem;
+    border: 1px solid var(--border-color, #334155);
+    border-radius: 6px;
+    background: var(--bg-surface, #1e293b);
+    color: var(--text-primary, #eceff4);
+    font: 600 .95rem/1.5 'Segoe UI', system-ui, sans-serif;
+    text-align: left;
+    cursor: pointer;
+    transform: none;
+}
+.practice-menu .practice-menu-links > a:hover,
+.practice-menu .practice-menu-links > a[aria-current="page"] {
+    background: #24364d;
+    color: var(--accent-ice, #88c0d0);
+    border-color: var(--accent-navy, #5e81ac);
+}
+.practice-menu .practice-menu-toggle:hover { background: #24364d; transform: none; }
+.practice-menu .practice-menu-toggle::after { content: '+'; font-size: 1.25rem; line-height: 1; }
+.practice-menu .practice-menu-toggle[aria-expanded="true"]::after { content: '-'; }
+.practice-menu :focus-visible { outline: 3px solid var(--accent-ice, #88c0d0); outline-offset: 3px; }
+[data-practice-toggle][hidden], [data-practice-links][hidden] { display: none !important; }
+@media (max-width: 991.98px) {
+    .practice-menu .practice-menu-links { flex-direction: column; align-items: stretch; gap: .35rem; }
+    .practice-menu .practice-menu-links > a { width: 100%; min-height: 48px; padding: .75rem; }
+    .practice-menu .practice-menu-toggle:not([hidden]) + .practice-menu-links { margin-top: .65rem; }
+}

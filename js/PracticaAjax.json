@@ -1,0 +1,44 @@
+[
+  {
+    "nombre": "Torneo Interfacultades de Valorant",
+    "categoria": "torneos",
+    "precio": 5.00,
+    "disponible": true,
+    "imagen": "https://ggspolhub.42web.io/assets/img/interUniversitario/partidaInterUniversitario1.jpg"
+  },
+  {
+    "nombre": "Copa GGspol FC 25",
+    "categoria": "torneos",
+    "precio": 4.00,
+    "disponible": true,
+    "imagen": "https://ggspolhub.42web.io/assets/img/inaguracionTorneoInterfacultades/exposicionTorneoInterfacultades.jpg"
+  },
+  {
+    "nombre": "Noche Gamer: partidas abiertas",
+    "categoria": "juegos",
+    "precio": 0.00,
+    "disponible": true,
+    "imagen": "https://ggspolhub.42web.io/assets/img/inaguracionTorneoInterfacultades/fotoGrupalTodosLosAsistentes.jpg"
+  },
+  {
+    "nombre": "Zona de juego y retos amistosos",
+    "categoria": "juegos",
+    "precio": 0.00,
+    "disponible": false,
+    "imagen": "https://ggspolhub.42web.io/assets/img/interUniversitario/partidaInterUniversitario1.jpg"
+  },
+  {
+    "nombre": "Taller de desarrollo de videojuegos",
+    "categoria": "actividades",
+    "precio": 0.00,
+    "disponible": true,
+    "imagen": "https://ggspolhub.42web.io/assets/img/gameJamPlus/fotoGrupoGameJamPlus.jpg"
+  },
+  {
+    "nombre": "Game Jam Plus - Comunidad GGspol",
+    "categoria": "actividades",
+    "precio": 0.00,
+    "disponible": true,
+    "imagen": "https://ggspolhub.42web.io/assets/img/gameJamPlus/fotoGrupoGameJamPlus.jpg"
+  }
+]

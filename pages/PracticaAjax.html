@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Jose Gustavo Moscoso Ramos">
+  <meta name="description" content="Catálogo de actividades de GGspol con búsquedas AJAX sin recargar la página.">
+  <title>Catálogo con AJAX | GGspolHUB</title>
+
+  <!-- Bootstrap CSS -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/icon/Porygon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styleAjax.css">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <link rel="stylesheet" href="../css/styleMenuPracticas.css">
+    <script src="../js/menuPracticas.js" defer></script>
+</head>
+
+<body class="bg-body bootstrap-site">
+  <header class="site-header container py-4">
+    <div class="container">
+      <h1>GGspol Hub</h1>
+      <p>Comunidad gamer, torneos y desarrollo de videojuegos</p>
+      <nav class="practice-menu" data-practice-menu aria-label="Navegacion entre practicas">
+            <button type="button" class="practice-menu-toggle" data-practice-toggle aria-controls="practice-links-practicaajax" aria-expanded="true" hidden>Menu de practicas</button>
+            <div class="practice-menu-links" data-practice-links id="practice-links-practicaajax">
+                <a href="../index.html">Inicio</a>
+                <a href="../pages/PracticaTexto.html" class="btn btn-outline-secondary btn-sm">Práctica de Texto</a>
+                <a href="../pages/PracticaGoogleSite.html" class="btn btn-outline-secondary btn-sm">Práctica de Builder (Google Site)</a>
+                <a href="../pages/PracticaCanvas.html" class="btn btn-outline-secondary btn-sm">Práctica de Builder (Canva)</a>
+                <a href="../ia/PracticaIA.html" class="btn btn-outline-secondary btn-sm">Práctica de Inteligencia Artificial</a>
+                <a href="../pages/PracticaListas.html" class="btn btn-outline-secondary btn-sm">Práctica de Listas</a>
+                <a href="../pages/PracticaImg.html" class="btn btn-outline-secondary btn-sm">Práctica de Imágenes</a>
+                <a href="../pages/PracticaAudio.html" class="btn btn-outline-secondary btn-sm">Práctica de Audio</a>
+                <a href="../pages/PracticaVideo.html" class="btn btn-outline-secondary btn-sm">Práctica de Video</a>
+                <a href="../pages/PracticaTablas.html" class="btn btn-outline-secondary btn-sm">Práctica de Tablas</a>
+                <a href="../pages/PracticaCss.html" class="btn btn-outline-secondary btn-sm">Práctica de Css</a>
+                <a href="../pages/PracticaCopyPaste.html" class="btn btn-outline-secondary btn-sm">Práctica de CopyPaste</a>
+                <a href="../pages/PracticaHipervinculos.html" class="btn btn-outline-secondary btn-sm">Práctica de Hipervínculos</a>
+                <a href="../pages/PracticaJavaScript.html" class="btn btn-outline-secondary btn-sm">Práctica de JavaScript</a>
+                <a href="../pages/PracticaControles.html" class="btn btn-outline-secondary btn-sm">Práctica de Controles</a>
+                <a href="../pages/PracticaFormulario.html" class="btn btn-outline-secondary btn-sm">Práctica de Formulario</a>
+                <a href="../pages/PracticaAjax.html" aria-current="page" class="btn btn-outline-secondary btn-sm">Práctica de Ajax</a>
+                <a href="../pages/PracticaMenuHorizontal.html" class="btn btn-outline-secondary btn-sm">Práctica de Menú Horizontal</a>
+                <a href="../pages/PracticaMenuVertical.html" class="btn btn-outline-secondary btn-sm">Práctica de Menú Vertical</a>
+                <a href="../pages/BootStrap/PracticaBootStrap.html" class="btn btn-outline-secondary btn-sm">Práctica BootStrap</a>
+                <a href="../pages/TailWind/PracticaTailWind.html" class="btn btn-outline-secondary btn-sm">Práctica TailWind</a>
+            </div>
+        </nav>
+    </div>
+  </header>
+  <!-- Barra superior fija -->
+  <nav class="navbar navbar-dark bg-primary">
+    <div class="container">
+      <span class="navbar-brand mb-0 h1">
+        GGspol HUB - Catálogo Gamer
+      </span>
+      <span class="text-white">
+        Explora el club sin recargar la página
+      </span>
+    </div>
+  </nav>
+
+  <main class="container my-4 py-4">
+
+    <!-- Primera fila: explicación general -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="alert alert-info">
+          <strong>Objetivo:</strong>
+          Explora torneos y actividades de GGspol. AJAX actualiza los resultados sin recargar toda la página.
+        </div>
+      </div>
+    </div>
+
+    <!-- Segunda fila: panel izquierdo y panel principal -->
+    <div class="row g-4">
+
+      <!-- Columna izquierda: zonas que no cambian -->
+      <div class="col-md-4">
+
+        <div class="card mb-3 zona-fija">
+          <div class="card-body">
+            <h5 class="card-title">Comunidad GGspol</h5>
+            <p class="card-text bloque-no-cambia">
+              Conoce las actividades del club y encuentra tu próximo torneo o evento gamer.
+            </p>
+          </div>
+        </div>
+
+        <div class="card mb-3">
+          <div class="card-header bg-dark text-white">
+            Explora por categoría
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">torneos</li>
+            <li class="list-group-item">juegos</li>
+            <li class="list-group-item">actividades</li>
+          </ul>
+        </div>
+		 <div class="card">
+          <div class="card-header bg-secondary text-white">
+            Actividad de búsqueda
+          </div>
+          <div class="card-body">
+            <p class="mb-1">Búsquedas realizadas:</p>
+            <h3 id="contadorConsultas" class="text-primary">0</h3>
+            <p class="bloque-no-cambia">
+              El contador se actualiza al consultar el catálogo.
+            </p>
+          </div>
+        </div>
+
+  <div class="card mt-3">
+    <div class="card-header bg-danger text-white">
+   En la comunidad
+    </div>
+
+    <div class="card-body">
+   <p class="bloque-no-cambia">
+     Deja el video en reproducción mientras buscas; si no se detiene, la consulta AJAX no recargó la página.
+   </p>
+
+   <div class="ratio ratio-16x9">
+    <iframe width="560" height="315"
+src="https://www.youtube.com/embed/Lbp3iXiIeLA?si=clWYqBTkcV7qGP3Z" title="YouTube video player"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in
+picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   </div>
+    </div>
+  </div>
+
+      </div>
+
+      <!-- Columna derecha: formulario y zona AJAX -->
+      <div class="col-md-8">
+
+        <div class="card mb-3">
+          <div class="card-header bg-primary text-white">
+            Busca actividades del club
+          </div>
+
+          <div class="card-body">
+            <label for="categoria" class="form-label">
+              Escribe una categoría
+            </label>
+
+            <div class="input-group">
+              <input
+                type="text"
+                id="categoria"
+                class="form-control"
+                placeholder="Ejemplo: torneos"
+              >
+
+              <button id="btnBuscar" class="btn btn-primary">
+                Buscar en GGspol
+              </button>
+            </div>
+
+            <div class="form-text">
+              Prueba con: torneos, juegos o actividades.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header bg-success text-white">
+            Resultados del catálogo GGspol
+          </div>
+
+
+          <div class="card-body zona-ajax" id="zonaAjax">
+            <p id="mensaje" class="fw-bold text-muted">
+              Aquí aparecerán las actividades disponibles del club.
+            </p>
+
+            <div id="resultado" class="row g-3"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Tercera fila: observación -->
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header text-bg-warning">
+            ¿Sabías que...?
+          </div>
+          <div class="card-body">
+            <p class="mb-0">
+              La búsqueda carga los datos del catálogo sin interrumpir el resto de la página. ¡Encuentra tu próxima actividad y únete a GGspol!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="../js/PracticaAjax.js"></script>
+
+    <script src="../js/vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>

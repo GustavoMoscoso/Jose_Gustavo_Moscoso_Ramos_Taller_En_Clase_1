@@ -1,79 +1,124 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="es" data-bs-theme="dark">
 <head>
-    <!-- Todas las páginas que desarrolle, deben tener la misma estructura-->
-    <!-- MetaData-->
-    <!-- Página principal de las practicas-->
-    <!-- ================ metadatos================== -->
     <meta charset="utf-8">
-	<!-- La escritura de caracteres especiales áéíóú ñ-->
-    <meta name="description" content="practicas-- img,html,css,js"><!-- -->
-    <meta name="keywords" content="HTM, CSS, JavaScript"><!-- -->
-    <meta name="author" content="Gustavo"><!-- -->
-    <meta http-equiv="refresh" content="10"><!-- -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- <link rel="stylesheet" href="css/styleGeneral.css"> -->
-    <!-- ================ Título e Iconos================== -->
-	
-    <!-- Todas las páginas que Desarrollemos en práctica deberan tener Título-->
-    <title>Practica Jose Gustavo Moscoso Ramos </title>
-    <!-- Todas las páginas que Desarrollemos en práctica deberan tener íconos-->
-    <link rel="icon" href="../img/icon/Gengar.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portafolio de José Gustavo Moscoso Ramos. Prácticas de desarrollo web de SOFG1006, ESPOL.">
+    <meta name="author" content="José Gustavo Moscoso Ramos">
+    <title>Inicio | GGspolHUB</title>
+    <link rel="icon" href="img/icon/Gengar.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styleGeneral.css">
+    <link rel="stylesheet" href="css/styleNavegacion.css">
+    <script src="js/vendor/bootstrap.bundle.min.js" defer></script>
+    <script src="js/navegacion.js" defer></script>
 </head>
-
-<body>
-    <header>
-        <h1>Index</h1>
+<body class="bootstrap-site">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <!-- La barra conserva el control del menú visible en todos los dispositivos. -->
+    <header class="site-toolbar sidebar-toolbar">
+        <button class="sidebar-toggle btn btn-outline-light" type="button" aria-controls="practicas" aria-expanded="true" data-sidebar-toggle>
+            <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="visually-hidden">Alternar menú de prácticas</span>
+        </button>
+        <a class="site-brand" href="index.html" aria-current="page">JGM<span> / WEB LAB</span></a>
+        <span class="toolbar-note">ESPOL <span class="text-secondary">/ SOFG1006</span></span>
     </header>
-    <main>
-        <!-- Etiquetas semanticas.- debe de utilizarlas y potenciar su trabajo web -->
-        <hr>
-        <!-- ================ Contenido Principal ================== -->
-        <section>
-            <!--  Lista de navegacion de las prácticas por desarrollar-->
-            <ol>
-                <li><a href="pages/PracticaTexto.html">Práctica de Texto</a></li>
-                <li><a href="pages/PracticaGoogleSite.html">Práctica de Builder (Google Site)</a></li>
-                <li><a href="pages/PracticaTexto.html">Práctica de Builder (Canva)</a></li>
-                <li><a href="ia/PracticaIA.html">Práctica de Inteligencia Artificial)</a></li>
-                <li><a href="pages/PracticaListas.html">Práctica de Listas</a></li>
-                <li><a href="pages/PracticaImg.html">Práctica de Imágenes</a></li>
-                <li><a href="pages/PracticaAudio.html">Práctica de Audio</a></li>
-                <li><a href="pages/PracticaVideo.html">Práctica de Video</a></li>
-                <li><a href="pages/PracticaTablas.html">Práctica de Tablas</a></li>
-                <li><a href="pages/PracticaCss.html">Práctica de Css</a></li>
-                <li><a href="pages/PracticaCopyPaste.html">Práctica de CopyPaste</a></li>
-                <li><a href="pages/PracticaHipervinculos.html">Practica de Hipervínculos</a></li>
-                <li><a href="pages/PracticaJavaScript.html">Práctica de JavaScript</a></li>
-                <li><a href="pages/PracticaControles.html">Práctica de Controles</a></li>
-                <li><a href="pages/PracticaFormulario.html">Práctica de Formulario</a></li>
-                <li><a href="pages/PracticaFormulario2.html">Práctica de Formulario-2</a></li>
-                <li><a href="pages/PracticaMenuHorizontal.html">Práctica de Menú Horizontal</a></li>
-                <li><a href="pages/PracticaMenuVertical.html">Práctica de Menú Vertical</a></li>
-                <li><a href="pages/PracticaCrazy.html">Práctica de Crazy</a></li><!-- Diseño interactivo Propio "Loco" -->
-                <li><a href="pages/BootStrap/PracticaBootStrap.html">Práctica BootStrap</a></li>
-                <li><a href="pages/TailWind/PracticaTailWind.html">Práctica TailWind</a></li>
-                <li><a href="pages/TailWind/PracticaTailWind_Black.html">Práctica TailWind - Black</a></li>
-            </ol>
-        </section>
-        <hr>
-        <article>
-            <h2>Bienvenidos a la página de practicas de Jose Gustavo Moscoso Ramos</h2>
-            <p>En esta página se encuentran las practicas desarrolladas en el curso de Desarrollo de Aplicaciones Web y Móvil (DAWM) de la Escuela Superior Politécnica del Litoral (ESPOL).</p>
-        </article>
-    </main>
-    <!-- ================ Pie de página ================== -->
-    <footer>
-        <p>Desarrollado por: Jose Gustavo Moscoso Ramos</p>
-        <p>
-            <a href="correo: jgmoscos@espol.edu.ec">Correo</a>
-            <a href="numero: 0980463064">Celular</a>
-        </p>
-        <p> © 2026 - Página de practicas académicas ESPOL</p>
-    </footer>
-    <!-- Contadores de visitas-->
-    <!-- El contador solo en la página principal-->
-</body>
 
+    <div class="dashboard" data-sidebar-layout>
+        <!-- Índice completo: rutas locales, agrupadas por área de aprendizaje. -->
+        <aside class="practice-sidebar" id="practicas" aria-label="Índice de prácticas">
+            <div class="sidebar-heading"><span class="eyebrow">Bitácora de clase</span><p>Explorar prácticas</p></div>
+            <nav class="practice-nav" aria-label="Todas las prácticas">
+                <div class="nav-group"><h2>01 / Fundamentos</h2><ul>
+                    <li><a href="pages/PracticaTexto.html">Texto</a></li>
+                    <li><a href="pages/PracticaListas.html">Listas</a></li>
+                    <li><a href="pages/PracticaHipervinculos.html">Hipervínculos</a></li>
+                    <li><a href="pages/PracticaTablas.html">Tablas</a></li>
+                    <li><a href="pages/PracticaGoogleSite.html">Google Site</a></li>
+                    <li><a href="pages/PracticaCanvas.html">Canva</a></li>
+                    <li><a href="ia/PracticaIA.html">Inteligencia artificial</a></li>
+                </ul></div>
+                <div class="nav-group"><h2>02 / Multimedia</h2><ul>
+                    <li><a href="pages/PracticaImg.html">Imágenes</a></li>
+                    <li><a href="pages/PracticaAudio.html">Audio</a></li>
+                    <li><a href="pages/PracticaVideo.html">Video</a></li>
+                </ul></div>
+                <div class="nav-group"><h2>03 / Diseño e interfaces</h2><ul>
+                    <li><a href="pages/PracticaCss.html">CSS</a></li>
+                    <li><a href="pages/PracticaCopyPaste.html">CopyPaste</a></li>
+                    <li><a href="pages/PracticaMenuHorizontal.html">Menú horizontal</a></li>
+                    <li><a href="pages/PracticaMenuVertical.html">Menú vertical</a></li>
+                    <li><a href="pages/BootStrap/PracticaBootStrap.html">Bootstrap</a></li>
+                    <li><a href="pages/TailWind/PracticaTailWind.html">Tailwind CSS</a></li>
+                </ul></div>
+                <div class="nav-group"><h2>04 / Interacción</h2><ul>
+                    <li><a href="pages/PracticaJavaScript.html">JavaScript</a></li>
+                    <li><a href="pages/PracticaControles.html">Controles</a></li>
+                    <li><a href="pages/PracticaFormulario.html">Formulario</a></li>
+                    <li><a href="pages/PracticaAjax.html">Ajax</a></li>
+                </ul></div>
+            </nav>
+        </aside>
+
+        <main class="dashboard-content" id="contenido" tabindex="-1">
+            <section class="portfolio-hero" aria-labelledby="titulo">
+                <p class="eyebrow">Portafolio académico / 2026</p>
+                <div class="hero-index" aria-hidden="true">&lt;web/&gt;</div>
+                <h1 id="titulo">Ideas que toman<br><span>forma en la web.</span></h1>
+                <p class="hero-lead">Soy <strong>José Gustavo Moscoso Ramos</strong>. Este es mi laboratorio de desarrollo: del primer elemento HTML a interfaces que responden e interactúan.</p>
+                <p>Taller 2: menú vertical y rediseño del sitio. Un recorrido por las prácticas con navegación lateral y una identidad visual compartida.</p>
+                <div class="hero-actions"><a class="btn btn-info" href="#colecciones">Explorar el portafolio</a><a class="quiet-link" href="#sobre-mi">Conocer el proyecto &rarr;</a></div>
+                <dl class="hero-facts"><div><dt>20</dt><dd>prácticas conectadas</dd></div><div><dt>04</dt><dd>rutas de aprendizaje</dd></div><div><dt>ESPOL</dt><dd>SOFG1006 / DAWM</dd></div></dl>
+            </section>
+
+            <section class="collection-section" id="colecciones" aria-labelledby="colecciones-titulo">
+                <div class="section-heading"><div><p class="eyebrow">Aprender construyendo</p><h2 id="colecciones-titulo">Cuatro rutas, un laboratorio.</h2></div><span class="small text-secondary">HTML / CSS / JS</span></div>
+                <div class="practice-cards">
+                    <article class="practice-card"><span class="card-number">01 / ESTRUCTURA</span><h3>El lenguaje de la web</h3><p>Texto, listas, enlaces y tablas: una base semántica para comunicar. Builders e IA amplían las herramientas del proceso.</p>
+                        <ul class="collection-links">
+                            <li><a href="pages/PracticaTexto.html">Texto</a></li>
+                            <li><a href="pages/PracticaListas.html">Listas</a></li>
+                            <li><a href="pages/PracticaHipervinculos.html">Hipervínculos</a></li>
+                            <li><a href="pages/PracticaTablas.html">Tablas</a></li>
+                            <li><a href="pages/PracticaGoogleSite.html">Google Site</a></li>
+                            <li><a href="pages/PracticaCanvas.html">Canva</a></li>
+                            <li><a href="ia/PracticaIA.html">Inteligencia artificial</a></li>
+                        </ul><span class="card-count">7 prácticas</span></article>
+                    <article class="practice-card"><span class="card-number">02 / CONTENIDO</span><h3>Más allá del texto</h3><p>Imágenes, audio y video integrados en el navegador. Explorar formatos y presentar contenido multimedia.</p>
+                        <ul class="collection-links">
+                            <li><a href="pages/PracticaImg.html">Imágenes</a></li>
+                            <li><a href="pages/PracticaAudio.html">Audio</a></li>
+                            <li><a href="pages/PracticaVideo.html">Video</a></li>
+                        </ul><span class="card-count">3 prácticas</span></article>
+                    <article class="practice-card"><span class="card-number">03 / INTERFAZ</span><h3>Diseñar para navegar</h3><p>Estilos propios, menús y frameworks. Una misma identidad Nord &amp; Deep Navy en pantallas de distintos tamaños.</p>
+                        <ul class="collection-links">
+                            <li><a href="pages/PracticaCss.html">CSS</a></li>
+                            <li><a href="pages/PracticaCopyPaste.html">CopyPaste</a></li>
+                            <li><a href="pages/PracticaMenuHorizontal.html">Menú horizontal</a></li>
+                            <li><a href="pages/PracticaMenuVertical.html">Menú vertical</a></li>
+                            <li><a href="pages/BootStrap/PracticaBootStrap.html">Bootstrap</a></li>
+                            <li><a href="pages/TailWind/PracticaTailWind.html">Tailwind CSS</a></li>
+                        </ul><span class="card-count">6 prácticas</span></article>
+                    <article class="practice-card"><span class="card-number">04 / COMPORTAMIENTO</span><h3>Una web que responde</h3><p>JavaScript transforma acciones en resultados: controles, formularios y carga asíncrona de datos con Ajax.</p>
+                        <ul class="collection-links">
+                            <li><a href="pages/PracticaJavaScript.html">JavaScript</a></li>
+                            <li><a href="pages/PracticaControles.html">Controles</a></li>
+                            <li><a href="pages/PracticaFormulario.html">Formulario</a></li>
+                            <li><a href="pages/PracticaAjax.html">Ajax</a></li>
+                        </ul><span class="card-count">4 prácticas</span></article>
+                </div>
+            </section>
+
+            <section class="about-panel" id="sobre-mi" aria-labelledby="sobre-titulo">
+                <p class="eyebrow">Detrás del código</p><h2 id="sobre-titulo">Un registro de lo aprendido.</h2>
+                <p><strong>JGM / WEB LAB</strong> es mi portafolio académico: reúne mis ejercicios de <strong>Desarrollo de Aplicaciones Web y Móviles</strong> en la Escuela Superior Politécnica del Litoral. Cada práctica conserva su objetivo y aporta una pieza al recorrido: estructura, presentación y comportamiento.</p>
+                <p><strong>GGspolHUB</strong> es mi proyecto de comunidad, un espacio distinto del portafolio para conectar y compartir. Puedes <a href="GGspol_Frontend/index.html">visitar el proyecto GGspolHUB &rarr;</a>.</p>
+                <p>Usa el índice izquierdo para ir directamente a un ejercicio. El botón de menú permite ganar espacio de lectura sin abandonar la página.</p>
+                <a href="mailto:jgmoscos@espol.edu.ec">jgmoscos@espol.edu.ec &rarr;</a>
+            </section>
+        </main>
+    </div>
+    <footer class="site-footer"><p>José Gustavo Moscoso Ramos <span>/ ESPOL / SOFG1006</span></p><p>&copy; 2026. Construido para aprender, compartir y seguir explorando.</p></footer>
+</body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 
 <head>
     <!-- ================ Metadatos ================== -->
@@ -8,53 +8,58 @@
     <meta name="keywords" content="HTML, Audio, source, controls, loop, muted, preload, ESPOL">
     <meta name="author" content="Jose Gustavo Moscoso Ramos">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styleGeneral.css">
     <!-- ================ Título e Iconos ================== -->
-    <title>Practica Jose Gustavo Moscoso Ramos - Audio en HTML</title>
-    <link rel="icon" href="../img/icon/Gengar.ico" type="image/x-icon">
+    <title>Audio HTML | GGspolHUB</title>
+
+    <link rel="icon" href="../img/icon/Jigglypuff.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <link rel="stylesheet" href="../css/styleMenuPracticas.css">
+    <script src="../js/menuPracticas.js" defer></script>
 </head>
 
-<body>
+<body class="bootstrap-site">
     <!-- ================ Cabecera y Menú Horizontal ================== -->
-    <header>
+    <header class="container py-4">
         <h1>Práctica 7: Audio en HTML</h1>
-    <nav>
-        <!--  Lista de navegacion de las prácticas por desarrollar-->
-        <a href="../pages/PracticaTexto.html">Práctica de Texto</a> |
-        <a href="../pages/PracticaGoogleSite.html">Práctica de Builder (Google Site)</a> |
-        <a href="../pages/PracticaTexto.html">Práctica de Builder (Canva)</a> |
-        <a href="../ia/PracticaIA.html">Práctica de Inteligencia Artificial</a> |
-        <a href="../pages/PracticaListas.html">Práctica de Listas</a> |
-        <a href="../pages/PracticaImg.html">Práctica de Imágenes</a> |
-        <a href="../pages/PracticaAudio.html">Práctica de Audio</a> |
-        <a href="../pages/PracticaVideo.html">Práctica de Video</a> |
-        <a href="../pages/PracticaTablas.html">Práctica de Tablas</a> |
-        <a href="../pages/PracticaCss.html">Práctica de Css</a> |
-        <a href="../pages/PracticaCopyPaste.html">Práctica de CopyPaste</a> |
-        <a href="../pages/PracticaHipervinculos.html">Practica de Hipervínculos</a> |
-        <a href="../pages/PracticaJavaScript.html">Práctica de JavaScript</a> |
-        <a href="../pages/PracticaControles.html">Práctica de Controles</a> |
-        <a href="../pages/PracticaFormulario.html">Práctica de Formulario</a> |
-        <a href="../pages/PracticaFormulario2.html">Práctica de Formulario-2</a> |
-        <a href="../pages/PracticaMenuHorizontal.html">Práctica de Menú Horizontal</a> |
-        <a href="../pages/PracticaMenuVertical.html">Práctica de Menú Vertical</a> |
-        <a href="../pages/PracticaCrazy.html">Práctica de Crazy</a> |<!-- Diseño interactivo Propio "Loco" -->
-        <a href="../pages/BootStrap/PracticaBootStrap.html">Práctica BootStrap</a> |
-        <a href="../pages/TailWind/PracticaTailWind.html">Práctica TailWind</a> |
-        <a href="../pages/TailWind/PracticaTailWind_Black.html">Práctica TailWind - Black</a>
-    </nav>
+    <nav class="practice-menu" data-practice-menu aria-label="Navegacion entre practicas">
+            <button type="button" class="practice-menu-toggle" data-practice-toggle aria-controls="practice-links-practicaaudio" aria-expanded="true" hidden>Menu de practicas</button>
+            <div class="practice-menu-links" data-practice-links id="practice-links-practicaaudio">
+                <a href="../index.html">Inicio</a>
+                <a href="../pages/PracticaTexto.html" class="btn btn-outline-secondary btn-sm">Práctica de Texto</a>
+                <a href="../pages/PracticaGoogleSite.html" class="btn btn-outline-secondary btn-sm">Práctica de Builder (Google Site)</a>
+                <a href="../pages/PracticaCanvas.html" class="btn btn-outline-secondary btn-sm">Práctica de Builder (Canva)</a>
+                <a href="../ia/PracticaIA.html" class="btn btn-outline-secondary btn-sm">Práctica de Inteligencia Artificial</a>
+                <a href="../pages/PracticaListas.html" class="btn btn-outline-secondary btn-sm">Práctica de Listas</a>
+                <a href="../pages/PracticaImg.html" class="btn btn-outline-secondary btn-sm">Práctica de Imágenes</a>
+                <a aria-current="page" href="../pages/PracticaAudio.html" class="btn btn-outline-secondary btn-sm">Práctica de Audio</a>
+                <a href="../pages/PracticaVideo.html" class="btn btn-outline-secondary btn-sm">Práctica de Video</a>
+                <a href="../pages/PracticaTablas.html" class="btn btn-outline-secondary btn-sm">Práctica de Tablas</a>
+                <a href="../pages/PracticaCss.html" class="btn btn-outline-secondary btn-sm">Práctica de Css</a>
+                <a href="../pages/PracticaCopyPaste.html" class="btn btn-outline-secondary btn-sm">Práctica de CopyPaste</a>
+                <a href="../pages/PracticaHipervinculos.html" class="btn btn-outline-secondary btn-sm">Practica de Hipervínculos</a>
+                <a href="../pages/PracticaJavaScript.html" class="btn btn-outline-secondary btn-sm">Práctica de JavaScript</a>
+                <a href="../pages/PracticaControles.html" class="btn btn-outline-secondary btn-sm">Práctica de Controles</a>
+                <a href="../pages/PracticaFormulario.html" class="btn btn-outline-secondary btn-sm">Práctica de Formulario</a>
+                <a href="../pages/PracticaAjax.html" class="btn btn-outline-secondary btn-sm">Práctica de Ajax</a>
+                <a href="../pages/PracticaMenuHorizontal.html" class="btn btn-outline-secondary btn-sm">Práctica de Menú Horizontal</a>
+                <a href="../pages/PracticaMenuVertical.html" class="btn btn-outline-secondary btn-sm">Práctica de Menú Vertical</a>
+                <a href="../pages/BootStrap/PracticaBootStrap.html" class="btn btn-outline-secondary btn-sm">Práctica BootStrap</a>
+                <a href="../pages/TailWind/PracticaTailWind.html" class="btn btn-outline-secondary btn-sm">Práctica TailWind</a>
+            </div>
+        </nav>
     </header>
 
     <hr>
 
     <!-- ================ Contenido Principal ================== -->
-    <main>
-        <section>
+    <main class="container py-4">
+        <section class="card card-body mb-4">
             <h2>Descripción de la Práctica</h2>
             <p>
-                Demostración funcional de la etiqueta <code>&lt;audio&gt;</code> y el elemento <code>&lt;source&gt;</code> 
-                en HTML5 para reproducir sonido desde la carpeta local <code>../audio/</code> y desde direcciones web externas, 
-                utilizando los atributos <code>controls</code>, <code>autoplay</code>, <code>muted</code>, <code>loop</code>, 
+                Demostración funcional de la etiqueta <code>&lt;audio&gt;</code> y el elemento <code>&lt;source&gt;</code>
+                en HTML5 para reproducir sonido desde la carpeta local <code>../audio/</code> y desde direcciones web externas,
+                utilizando los atributos <code>controls</code>, <code>autoplay</code>, <code>muted</code>, <code>loop</code>,
                 <code>preload</code>, <code>src</code> y <code>type</code>.
             </p>
         </section>
@@ -62,10 +67,10 @@
         <hr>
 
         <!-- 1. Audio desde carpeta local con controls -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>1. Audio desde carpeta local (Atributos <code>src</code> y <code>controls</code>)</h2>
             <p>
-                Explicación: Reproduce un archivo alojado localmente en la carpeta <code>../audio/</code> mostrando los controles 
+                Explicación: Reproduce un archivo alojado localmente en la carpeta <code>../audio/</code> mostrando los controles
                 nativos del navegador (reproducir, pausa, barra de progreso y volumen).
             </p>
             <audio src="../audio/audio_local.mp3" controls>
@@ -75,7 +80,7 @@
         <hr>
 
         <!-- 2. Audio desde URL externa -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>2. Audio desde una URL externa</h2>
             <p>Explicación: Carga y reproduce una pista de audio directamente desde un servidor externo en internet.</p>
             <audio src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Example.ogg" controls>
@@ -86,10 +91,10 @@
         <hr>
 
         <!-- 3. Uso de la etiqueta <source> y atributo type -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>3. Etiqueta &lt;source&gt; con múltiples formatos y atributo <code>type</code></h2>
             <p>
-                Explicación: Permite especificar varias fuentes de audio en distintos formatos (<code>audio/ogg</code>, <code>audio/mpeg</code>) 
+                Explicación: Permite especificar varias fuentes de audio en distintos formatos (<code>audio/ogg</code>, <code>audio/mpeg</code>)
                 para garantizar la compatibilidad en cualquier navegador web.
             </p>
             <audio controls>
@@ -102,7 +107,7 @@
         <hr>
 
         <!-- 4. Audio con reproducción en bucle (loop) -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>4. Audio en bucle continuo (Atributo <code>loop</code>)</h2>
             <p>Explicación: El atributo booleano <code>loop</code> hace que el audio vuelva a empezar automáticamente cada vez que finaliza su reproducción.</p>
             <audio controls loop>
@@ -114,10 +119,10 @@
         <hr>
 
         <!-- 5. Audio con autoplay y muted -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>5. Audio con reproducción automática y silenciado (Atributos <code>autoplay</code> y <code>muted</code>)</h2>
             <p>
-                Explicación: El atributo <code>autoplay</code> solicita que el audio inicie al cargar la página, mientras que 
+                Explicación: El atributo <code>autoplay</code> solicita que el audio inicie al cargar la página, mientras que
                 <code>muted</code> inicia el reproductor con el volumen silenciado por defecto.
             </p>
             <audio controls autoplay muted>
@@ -129,10 +134,10 @@
         <hr>
 
         <!-- 6. Audio con atributo preload -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>6. Control de precarga del audio (Atributo <code>preload</code>)</h2>
             <p>
-                Explicación: El atributo <code>preload</code> indica al navegador cómo debe descargar el archivo antes de que el usuario 
+                Explicación: El atributo <code>preload</code> indica al navegador cómo debe descargar el archivo antes de que el usuario
                 presione "Play" (valores posibles: <code>none</code>, <code>metadata</code> o <code>auto</code>).
             </p>
             <h3>Ejemplo con <code>preload="metadata"</code> (Solo descarga duración y metadatos iniciales):</h3>
@@ -156,14 +161,15 @@
     <hr>
 
     <!-- ================ Pie de página ================== -->
-    <footer>
+    <footer class="container py-4 border-top text-center">
         <p>Desarrollado por: Jose Gustavo Moscoso Ramos</p>
         <p>
-            Contacto: <a href="mailto:jgmoscos@espol.edu.ec">jgmoscos@espol.edu.ec (Correo)</a> | 
+            Contacto: <a href="mailto:jgmoscos@espol.edu.ec">jgmoscos@espol.edu.ec (Correo)</a> |
             <a href="tel:0980463064">0980463064 (Celular)</a>
         </p>
         <p>© 2026 Jose Gustavo Moscoso Ramos. Todos los derechos reservados. Sitio desarrollado con fines académicos para la materia de Desarrollo Web - ESPOL.</p>
     </footer>
+    <script src="../js/vendor/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

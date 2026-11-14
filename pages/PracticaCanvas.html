@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 
 <head>
     <!-- ================ Metadatos ================== -->
@@ -8,63 +8,68 @@
     <meta name="keywords" content="HTML, ESPOL, Desarrollo Web, Canva, Builder">
     <meta name="author" content="Jose Gustavo Moscoso Ramos">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styleGeneral.css">
     <!-- ================ Título e Iconos ================== -->
-    <title>Practica Jose Gustavo Moscoso Ramos - Canva</title>
-    <link rel="icon" href="../img/icon/Gengar.ico" type="image/x-icon">
+    <title>Sitio web con Canva | GGspolHUB</title>
+
+    <link rel="icon" href="../img/icon/Clefairy.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <link rel="stylesheet" href="../css/styleMenuPracticas.css">
+    <script src="../js/menuPracticas.js" defer></script>
 </head>
 
-<body>
+<body class="bootstrap-site">
     <!-- ================ Cabecera y Menú Horizontal ================== -->
-    <header>
+    <header class="container py-4">
         <h1>Práctica 2: Práctica de Builder (Canva)</h1>
-    <nav>
-        <!--  Lista de navegacion de las prácticas por desarrollar-->
-        <a href="../pages/PracticaTexto.html">Práctica de Texto</a> |
-        <a href="../pages/PracticaGoogleSite.html">Práctica de Builder (Google Site)</a> |
-        <a href="../pages/PracticaTexto.html">Práctica de Builder (Canva)</a> |
-        <a href="../ia/PracticaIA.html">Práctica de Inteligencia Artificial</a> |
-        <a href="../pages/PracticaListas.html">Práctica de Listas</a> |
-        <a href="../pages/PracticaImg.html">Práctica de Imágenes</a> |
-        <a href="../pages/PracticaAudio.html">Práctica de Audio</a> |
-        <a href="../pages/PracticaVideo.html">Práctica de Video</a> |
-        <a href="../pages/PracticaTablas.html">Práctica de Tablas</a> |
-        <a href="../pages/PracticaCss.html">Práctica de Css</a> |
-        <a href="../pages/PracticaCopyPaste.html">Práctica de CopyPaste</a> |
-        <a href="../pages/PracticaHipervinculos.html">Practica de Hipervínculos</a> |
-        <a href="../pages/PracticaJavaScript.html">Práctica de JavaScript</a> |
-        <a href="../pages/PracticaControles.html">Práctica de Controles</a> |
-        <a href="../pages/PracticaFormulario.html">Práctica de Formulario</a> |
-        <a href="../pages/PracticaFormulario2.html">Práctica de Formulario-2</a> |
-        <a href="../pages/PracticaMenuHorizontal.html">Práctica de Menú Horizontal</a> |
-        <a href="../pages/PracticaMenuVertical.html">Práctica de Menú Vertical</a> |
-        <a href="../pages/PracticaCrazy.html">Práctica de Crazy</a> |<!-- Diseño interactivo Propio "Loco" -->
-        <a href="../pages/BootStrap/PracticaBootStrap.html">Práctica BootStrap</a> |
-        <a href="../pages/TailWind/PracticaTailWind.html">Práctica TailWind</a> |
-        <a href="../pages/TailWind/PracticaTailWind_Black.html">Práctica TailWind - Black</a>
-    </nav>
+    <nav class="practice-menu" data-practice-menu aria-label="Navegacion entre practicas">
+            <button type="button" class="practice-menu-toggle" data-practice-toggle aria-controls="practice-links-practicacanvas" aria-expanded="true" hidden>Menu de practicas</button>
+            <div class="practice-menu-links" data-practice-links id="practice-links-practicacanvas">
+                <a href="../index.html">Inicio</a>
+                <a href="../pages/PracticaTexto.html" class="btn btn-outline-secondary btn-sm">Práctica de Texto</a>
+                <a href="../pages/PracticaGoogleSite.html" class="btn btn-outline-secondary btn-sm">Práctica de Builder (Google Site)</a>
+                <a aria-current="page" href="../pages/PracticaCanvas.html" class="btn btn-outline-secondary btn-sm">Práctica de Builder (Canva)</a>
+                <a href="../ia/PracticaIA.html" class="btn btn-outline-secondary btn-sm">Práctica de Inteligencia Artificial</a>
+                <a href="../pages/PracticaListas.html" class="btn btn-outline-secondary btn-sm">Práctica de Listas</a>
+                <a href="../pages/PracticaImg.html" class="btn btn-outline-secondary btn-sm">Práctica de Imágenes</a>
+                <a href="../pages/PracticaAudio.html" class="btn btn-outline-secondary btn-sm">Práctica de Audio</a>
+                <a href="../pages/PracticaVideo.html" class="btn btn-outline-secondary btn-sm">Práctica de Video</a>
+                <a href="../pages/PracticaTablas.html" class="btn btn-outline-secondary btn-sm">Práctica de Tablas</a>
+                <a href="../pages/PracticaCss.html" class="btn btn-outline-secondary btn-sm">Práctica de Css</a>
+                <a href="../pages/PracticaCopyPaste.html" class="btn btn-outline-secondary btn-sm">Práctica de CopyPaste</a>
+                <a href="../pages/PracticaHipervinculos.html" class="btn btn-outline-secondary btn-sm">Practica de Hipervínculos</a>
+                <a href="../pages/PracticaJavaScript.html" class="btn btn-outline-secondary btn-sm">Práctica de JavaScript</a>
+                <a href="../pages/PracticaControles.html" class="btn btn-outline-secondary btn-sm">Práctica de Controles</a>
+                <a href="../pages/PracticaFormulario.html" class="btn btn-outline-secondary btn-sm">Práctica de Formulario</a>
+                <a href="../pages/PracticaAjax.html" class="btn btn-outline-secondary btn-sm">Práctica de Ajax</a>
+                <a href="../pages/PracticaMenuHorizontal.html" class="btn btn-outline-secondary btn-sm">Práctica de Menú Horizontal</a>
+                <a href="../pages/PracticaMenuVertical.html" class="btn btn-outline-secondary btn-sm">Práctica de Menú Vertical</a>
+                <a href="../pages/BootStrap/PracticaBootStrap.html" class="btn btn-outline-secondary btn-sm">Práctica BootStrap</a>
+                <a href="../pages/TailWind/PracticaTailWind.html" class="btn btn-outline-secondary btn-sm">Práctica TailWind</a>
+            </div>
+        </nav>
     </header>
 
     <hr>
 
     <!-- ================ Contenido Principal ================== -->
-    <main>
-        <section>
+    <main class="container py-4">
+        <section class="card card-body mb-4">
             <h2>Descripción de la Práctica</h2>
             <p>
-                En esta práctica se utilizó la plataforma <strong>Canva</strong> como constructor visual para maquetar y publicar 
-                una página web informativa con diseño adaptable, organizando secciones visuales, tipografías, recursos gráficos 
+                En esta práctica se utilizó la plataforma <strong>Canva</strong> como constructor visual para maquetar y publicar
+                una página web informativa con diseño adaptable, organizando secciones visuales, tipografías, recursos gráficos
                 y enlaces interactivos.
             </p>
             <p>
-                El recurso fue configurado con permisos de visualización pública para que cualquier usuario pueda consultarlo 
+                El recurso fue configurado con permisos de visualización pública para que cualquier usuario pueda consultarlo
                 directamente desde el navegador sin necesidad de iniciar sesión.
             </p>
         </section>
 
         <hr>
 
-        <section>
+        <section class="card card-body mb-4">
             <h2>Acceso al Recurso Público en Canva</h2>
             <p>Haz clic en el siguiente enlace para visualizar la actividad desarrollada en Canva (se abrirá en una nueva pestaña):</p>
             <p>
@@ -83,14 +88,15 @@
     <hr>
 
     <!-- ================ Pie de página ================== -->
-    <footer>
+    <footer class="container py-4 border-top text-center">
         <p>Desarrollado por: Jose Gustavo Moscoso Ramos</p>
         <p>
-            Contacto: <a href="mailto:jgmoscos@espol.edu.ec">jgmoscos@espol.edu.ec (Correo)</a> | 
+            Contacto: <a href="mailto:jgmoscos@espol.edu.ec">jgmoscos@espol.edu.ec (Correo)</a> |
             <a href="tel:0980463064">0980463064 (Celular)</a>
         </p>
         <p>© 2026 Jose Gustavo Moscoso Ramos. Todos los derechos reservados. Sitio desarrollado con fines académicos para la materia de Desarrollo Web - ESPOL.</p>
     </footer>
+    <script src="../js/vendor/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

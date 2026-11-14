@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Práctica de menú horizontal adaptable con Bootstrap 5.3.3, por José Gustavo Moscoso Ramos, ESPOL.">
+    <meta name="author" content="José Gustavo Moscoso Ramos">
+    <title>Menú horizontal | GGspolHUB</title>
+    <link rel="icon" href="../img/icon/Wartortle.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <link rel="stylesheet" href="../css/styleNavegacion.css">
+    <script src="../js/vendor/bootstrap.bundle.min.js" defer></script>
+    <script src="../js/navegacion.js" defer></script>
+</head>
+<body class="bootstrap-site">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-toolbar"><a class="site-brand" href="../index.html">JGM<span> / WEB LAB</span></a><span class="toolbar-note">ESPOL / SOFG1006</span></header>
+    <!-- Bootstrap Collapse controla el menú en pantallas pequeñas. -->
+    <nav class="navbar navbar-expand-md demo-navbar sticky-top" aria-label="Navegación horizontal de demostración">
+        <a class="navbar-brand" href="#contenido">Menú horizontal</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuHorizontal" aria-controls="menuHorizontal" aria-expanded="false" aria-label="Alternar navegación"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="menuHorizontal"><ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="PracticaMenuVertical.html">Menú vertical</a></li>
+            <li class="nav-item"><a class="nav-link" href="#concepto">Concepto</a></li>
+            <li class="nav-item"><a class="nav-link" href="#estructura">Estructura</a></li>
+            <li class="nav-item"><a class="nav-link" href="#prueba">Prueba</a></li>
+        </ul></div>
+    </nav>
+    <main class="horizontal-content" id="contenido" tabindex="-1">
+        <section class="portfolio-hero" aria-labelledby="titulo"><p class="eyebrow">03 / Diseño e interfaces</p><h1 id="titulo">Una ruta clara,<br><span>en horizontal.</span></h1><p class="hero-lead">Una barra superior conecta las páginas principales y las secciones de este ejercicio. En móvil, sus enlaces se agrupan detrás de un control desplegable.</p><a class="btn btn-info" href="PracticaMenuVertical.html">Comparar con el menú vertical</a></section>
+        <section class="demo-section" id="concepto"><h2>El concepto</h2><p>La navegación horizontal aprovecha el ancho disponible y mantiene las opciones principales en una sola zona. Es apropiada para un conjunto breve de destinos, como Inicio, otra práctica y los apartados de esta página.</p><p>La identidad visual conserva los fondos Deep Navy, bordes pizarra y acentos de hielo del portafolio.</p></section>
+        <section class="demo-section" id="estructura"><h2>La estructura</h2><p>El elemento <code>nav</code> describe la navegación. Una lista organiza los enlaces y un botón identifica el panel que controla mediante <code>aria-controls</code>.</p><p>Las clases <code>navbar-expand-md</code> y <code>collapse navbar-collapse</code> de Bootstrap muestran el menú completo desde 768 px y lo hacen desplegable por debajo de ese ancho. El bundle local actualiza <code>aria-expanded</code> al abrir y cerrar.</p></section>
+        <section class="demo-section" id="prueba"><h2>Pruébalo en el navegador</h2><ol><li>Reduce la ventana a menos de 768 px y abre el menú con su botón.</li><li>Usa Tab y Enter para recorrer y activar los enlaces.</li><li>Selecciona Concepto o Estructura para desplazarte a una sección real.</li><li>Abre la práctica vertical para comparar una barra superior con una columna lateral.</li></ol><a href="../index.html">Volver al portafolio &rarr;</a></section>
+    </main>
+    <footer class="site-footer"><p>José Gustavo Moscoso Ramos / ESPOL / SOFG1006</p><p>&copy; 2026. Práctica de navegación horizontal con Bootstrap local.</p></footer>
+</body>
+</html>

@@ -1,0 +1,11 @@
+/* El tema y el menu proceden de las hojas compartidas; aqui solo hay ajustes del catalogo. */
+.bootstrap-site .producto-img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+.bootstrap-site .producto-card.no-disponible { opacity: .75; }
+.bootstrap-site #zonaAjax.cargando { opacity: .6; }
+@media (prefers-reduced-motion: no-preference) {
+    .bootstrap-site #zonaAjax { transition: opacity .15s ease; }
+}

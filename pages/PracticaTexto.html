@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 
 <head>
     <!-- ================ Metadatos ================== -->
@@ -8,51 +8,56 @@
     <meta name="keywords" content="HTML, Texto, Etiquetas, Semántica, ESPOL, Desarrollo Web">
     <meta name="author" content="Jose Gustavo Moscoso Ramos">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styleGeneral.css">
     <!-- ================ Título e Iconos ================== -->
-    <title>Practica Jose Gustavo Moscoso Ramos - Texto en HTML</title>
-    <link rel="icon" href="../img/icon/Gengar.ico" type="image/x-icon">
+    <title>Texto y semántica HTML | GGspolHUB</title>
+
+    <link rel="icon" href="../img/icon/Bulbasaur.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <link rel="stylesheet" href="../css/styleMenuPracticas.css">
+    <script src="../js/menuPracticas.js" defer></script>
 </head>
 
-<body>
+<body class="bootstrap-site">
     <!-- ================ Cabecera y Menú Horizontal ================== -->
-    <header>
+    <header class="container py-4">
         <h1>Práctica 4: Etiquetas de Texto en HTML</h1>
-        <nav>
-            <!--  Lista de navegacion de las prácticas por desarrollar-->
-            <a href="../pages/PracticaTexto.html">Práctica de Texto</a> |
-            <a href="../pages/PracticaGoogleSite.html">Práctica de Builder (Google Site)</a> |
-            <a href="../pages/PracticaTexto.html">Práctica de Builder (Canva)</a> |
-            <a href="../ia/PracticaIA.html">Práctica de Inteligencia Artificial</a> |
-            <a href="../pages/PracticaListas.html">Práctica de Listas</a> |
-            <a href="../pages/PracticaImg.html">Práctica de Imágenes</a> |
-            <a href="../pages/PracticaAudio.html">Práctica de Audio</a> |
-            <a href="../pages/PracticaVideo.html">Práctica de Video</a> |
-            <a href="../pages/PracticaTablas.html">Práctica de Tablas</a> |
-            <a href="../pages/PracticaCss.html">Práctica de Css</a> |
-            <a href="../pages/PracticaCopyPaste.html">Práctica de CopyPaste</a> |
-            <a href="../pages/PracticaHipervinculos.html">Practica de Hipervínculos</a> |
-            <a href="../pages/PracticaJavaScript.html">Práctica de JavaScript</a> |
-            <a href="../pages/PracticaControles.html">Práctica de Controles</a> |
-            <a href="../pages/PracticaFormulario.html">Práctica de Formulario</a> |
-            <a href="../pages/PracticaFormulario2.html">Práctica de Formulario-2</a> |
-            <a href="../pages/PracticaMenuHorizontal.html">Práctica de Menú Horizontal</a> |
-            <a href="../pages/PracticaMenuVertical.html">Práctica de Menú Vertical</a> |
-            <a href="../pages/PracticaCrazy.html">Práctica de Crazy</a> |<!-- Diseño interactivo Propio "Loco" -->
-            <a href="../pages/BootStrap/PracticaBootStrap.html">Práctica BootStrap</a> |
-            <a href="../pages/TailWind/PracticaTailWind.html">Práctica TailWind</a> |
-            <a href="../pages/TailWind/PracticaTailWind_Black.html">Práctica TailWind - Black</a>
+        <nav class="practice-menu" data-practice-menu aria-label="Navegacion entre practicas">
+            <button type="button" class="practice-menu-toggle" data-practice-toggle aria-controls="practice-links-practicatexto" aria-expanded="true" hidden>Menu de practicas</button>
+            <div class="practice-menu-links" data-practice-links id="practice-links-practicatexto">
+                <a href="../index.html">Inicio</a>
+                <a aria-current="page" href="../pages/PracticaTexto.html" class="btn btn-outline-secondary btn-sm">Práctica de Texto</a>
+                <a href="../pages/PracticaGoogleSite.html" class="btn btn-outline-secondary btn-sm">Práctica de Builder (Google Site)</a>
+                <a href="../pages/PracticaCanvas.html" class="btn btn-outline-secondary btn-sm">Práctica de Builder (Canva)</a>
+                <a href="../ia/PracticaIA.html" class="btn btn-outline-secondary btn-sm">Práctica de Inteligencia Artificial</a>
+                <a href="../pages/PracticaListas.html" class="btn btn-outline-secondary btn-sm">Práctica de Listas</a>
+                <a href="../pages/PracticaImg.html" class="btn btn-outline-secondary btn-sm">Práctica de Imágenes</a>
+                <a href="../pages/PracticaAudio.html" class="btn btn-outline-secondary btn-sm">Práctica de Audio</a>
+                <a href="../pages/PracticaVideo.html" class="btn btn-outline-secondary btn-sm">Práctica de Video</a>
+                <a href="../pages/PracticaTablas.html" class="btn btn-outline-secondary btn-sm">Práctica de Tablas</a>
+                <a href="../pages/PracticaCss.html" class="btn btn-outline-secondary btn-sm">Práctica de Css</a>
+                <a href="../pages/PracticaCopyPaste.html" class="btn btn-outline-secondary btn-sm">Práctica de CopyPaste</a>
+                <a href="../pages/PracticaHipervinculos.html" class="btn btn-outline-secondary btn-sm">Practica de Hipervínculos</a>
+                <a href="../pages/PracticaJavaScript.html" class="btn btn-outline-secondary btn-sm">Práctica de JavaScript</a>
+                <a href="../pages/PracticaControles.html" class="btn btn-outline-secondary btn-sm">Práctica de Controles</a>
+                <a href="../pages/PracticaFormulario.html" class="btn btn-outline-secondary btn-sm">Práctica de Formulario</a>
+                <a href="../pages/PracticaAjax.html" class="btn btn-outline-secondary btn-sm">Práctica de Ajax</a>
+                <a href="../pages/PracticaMenuHorizontal.html" class="btn btn-outline-secondary btn-sm">Práctica de Menú Horizontal</a>
+                <a href="../pages/PracticaMenuVertical.html" class="btn btn-outline-secondary btn-sm">Práctica de Menú Vertical</a>
+                <a href="../pages/BootStrap/PracticaBootStrap.html" class="btn btn-outline-secondary btn-sm">Práctica BootStrap</a>
+                <a href="../pages/TailWind/PracticaTailWind.html" class="btn btn-outline-secondary btn-sm">Práctica TailWind</a>
+            </div>
         </nav>
     </header>
 
     <hr>
 
     <!-- ================ Contenido Principal ================== -->
-    <main>
-        <section>
+    <main class="container py-4">
+        <section class="card card-body mb-4">
             <h2>Descripción de la Práctica</h2>
             <p>
-                Esta página demuestra el funcionamiento semántico y visual de todas las etiquetas HTML destinadas a la 
+                Esta página demuestra el funcionamiento semántico y visual de todas las etiquetas HTML destinadas a la
                 estructuración de encabezados, párrafos, resaltado de texto, citas bibliográficas y fragmentos de código.
             </p>
         </section>
@@ -60,7 +65,7 @@
         <hr>
 
         <!-- 1. Encabezados h1 a h6 -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>1. Etiquetas de Encabezado (&lt;h1&gt; a &lt;h6&gt;)</h2>
             <p>Definen seis niveles de jerarquía para títulos y subtítulos dentro de un documento web:</p>
             <h1>Ejemplo de Encabezado &lt;h1&gt; (Nivel 1 - Principal)</h1>
@@ -74,7 +79,7 @@
         <hr>
 
         <!-- 2. Párrafo <p> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>2. Etiqueta &lt;p&gt; (Párrafo)</h2>
             <p>Explicación: Agrupa oraciones dentro de un bloque de texto estructurado con márgenes automáticos superiores e inferiores.</p>
             <p>Demostración: Este es un primer párrafo de ejemplo creado con la etiqueta &lt;p&gt; para la materia de Desarrollo de Aplicaciones Web y Móviles en la ESPOL.</p>
@@ -84,7 +89,7 @@
         <hr>
 
         <!-- 3. Salto de línea <br> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>3. Etiqueta &lt;br&gt; (Salto de línea)</h2>
             <p>Explicación: Es una etiqueta vacía que inserta un salto de línea simple dentro de un mismo bloque de texto (útil en direcciones o poemas).</p>
             <p>
@@ -98,7 +103,7 @@
         <hr>
 
         <!-- 4. Separador horizontal <hr> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>4. Etiqueta &lt;hr&gt; (Cambio temático / Línea horizontal)</h2>
             <p>Explicación: Representa una transición temática entre párrafos o secciones y se dibuja como una línea horizontal divisoria.</p>
             <p>Texto superior antes del divisor temático interno:</p>
@@ -109,7 +114,7 @@
         <hr>
 
         <!-- 5. Negrita visual <b> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>5. Etiqueta &lt;b&gt; (Negrita de atención visual)</h2>
             <p>Explicación: Aplica texto en negrita para atraer la atención hacia palabras clave o nombres de productos sin otorgarles mayor importancia semántica.</p>
             <p>Demostración: En el desarrollo frontend utilizamos editores como <b>Visual Studio Code</b> y navegadores como <b>Google Chrome</b>.</p>
@@ -118,7 +123,7 @@
         <hr>
 
         <!-- 6. Importancia fuerte <strong> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>6. Etiqueta &lt;strong&gt; (Importancia semántica fuerte)</h2>
             <p>Explicación: Indica que su contenido tiene una gran importancia, seriedad o urgencia semántica (se visualiza en negrita).</p>
             <p>Demostración: <strong>Restricción obligatoria:</strong> Todo el desarrollo de este taller debe realizarse únicamente con HTML puro.</p>
@@ -127,7 +132,7 @@
         <hr>
 
         <!-- 7. Cursiva <i> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>7. Etiqueta &lt;i&gt; (Cursiva para términos técnicos o extranjeros)</h2>
             <p>Explicación: Muestra el texto en cursiva para denotar extranjerismos, taxonomías, pensamientos o términos técnicos.</p>
             <p>Demostración: El diseño adaptable se conoce en inglés bajo el concepto de <i>Responsive Web Design</i> o metodología <i>Mobile First</i>.</p>
@@ -136,7 +141,7 @@
         <hr>
 
         <!-- 8. Énfasis <em> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>8. Etiqueta &lt;em&gt; (Énfasis semántico)</h2>
             <p>Explicación: Aplica énfasis en la pronunciación o el sentido de una palabra dentro de una oración.</p>
             <p>Demostración: Debes entregar <em>todas</em> las páginas correctamente vinculadas desde el archivo principal.</p>
@@ -145,7 +150,7 @@
         <hr>
 
         <!-- 9. Subrayado <u> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>9. Etiqueta &lt;u&gt; (Texto subrayado / Anotación no textual)</h2>
             <p>Explicación: Representa texto con una anotación no articulada, como nombres propios específicos o palabras con errores ortográficos intencionales.</p>
             <p>Demostración: Es importante escribir correctamente la palabra <u>hipervínculo</u> y evitar enlaces rotos.</p>
@@ -154,7 +159,7 @@
         <hr>
 
         <!-- 10. Resaltado <mark> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>10. Etiqueta &lt;mark&gt; (Texto resaltado)</h2>
             <p>Explicación: Resalta un fragmento de texto (como un marcador amarillo) por su relevancia en el contexto actual.</p>
             <p>Demostración: Para aprobar la revisión, verifica que <mark>no existan archivos multimedia faltantes</mark> en las carpetas del proyecto.</p>
@@ -163,7 +168,7 @@
         <hr>
 
         <!-- 11. Texto pequeño <small> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>11. Etiqueta &lt;small&gt; (Texto secundario o legal)</h2>
             <p>Explicación: Reduce el tamaño de fuente un nivel para representar comentarios secundarios, cláusulas o derechos de autor.</p>
             <p>Demostración: Suscripción gratuita al boletín estudiantil. <small>*Aplican términos y condiciones de uso académico en ESPOL 2026.</small></p>
@@ -172,7 +177,7 @@
         <hr>
 
         <!-- 12. Superíndice <sup> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>12. Etiqueta &lt;sup&gt; (Superíndice)</h2>
             <p>Explicación: Muestra el texto elevado y con menor tamaño, ideal para exponentes matemáticos, fechas ordinales o referencias al pie.</p>
             <p>Demostración: El Teorema de Pitágoras establece que a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>, y la famosa ecuación de Einstein es E = m·c<sup>2</sup>.</p>
@@ -181,7 +186,7 @@
         <hr>
 
         <!-- 13. Subíndice <sub> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>13. Etiqueta &lt;sub&gt; (Subíndice)</h2>
             <p>Explicación: Muestra el texto por debajo de la línea base, utilizado en fórmulas químicas o bases numéricas.</p>
             <p>Demostración: La fórmula química del agua es H<sub>2</sub>O, la del dióxido de carbono es CO<sub>2</sub> y el número binario 1010<sub>2</sub> equivale a 10<sub>10</sub>.</p>
@@ -190,7 +195,7 @@
         <hr>
 
         <!-- 14. Texto eliminado <del> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>14. Etiqueta &lt;del&gt; (Texto eliminado)</h2>
             <p>Explicación: Representa texto que ha sido borrado o reemplazado respecto a una versión previa del documento (se muestra tachado).</p>
             <p>Demostración: La entrega del taller estaba programada para el <del>lunes 26 de octubre</del>.</p>
@@ -199,7 +204,7 @@
         <hr>
 
         <!-- 15. Texto insertado <ins> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>15. Etiqueta &lt;ins&gt; (Texto insertado)</h2>
             <p>Explicación: Marca texto que ha sido añadido recientemente al documento (se muestra subrayado y suele combinarse con &lt;del&gt;).</p>
             <p>Demostración: Fecha de entrega actualizada: <del>26 de octubre</del> <ins>viernes 30 de octubre de 2026</ins>.</p>
@@ -208,11 +213,11 @@
         <hr>
 
         <!-- 16. Abreviatura <abbr> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>16. Etiqueta &lt;abbr&gt; (Abreviatura o acrónimo)</h2>
             <p>Explicación: Define una abreviatura o sigla; al pasar el cursor por encima muestra su significado completo gracias al atributo <code>title</code>.</p>
             <p>
-                Demostración (pasa el mouse sobre las siglas): Estudiamos <abbr title="HyperText Markup Language">HTML</abbr> y 
+                Demostración (pasa el mouse sobre las siglas): Estudiamos <abbr title="HyperText Markup Language">HTML</abbr> y
                 <abbr title="Cascading Style Sheets">CSS</abbr> en la <abbr title="Escuela Superior Politécnica del Litoral">ESPOL</abbr>.
             </p>
         </section>
@@ -220,7 +225,7 @@
         <hr>
 
         <!-- 17. Obra citada <cite> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>17. Etiqueta &lt;cite&gt; (Referencia al título de una obra)</h2>
             <p>Explicación: Se utiliza para marcar el título de un libro, artículo académico, película, pintura o estándar técnico.</p>
             <p>Demostración: El estándar oficial de la web moderna está documentado en <cite>HTML Living Standard de WHATWG</cite> y en <cite>MDN Web Docs</cite>.</p>
@@ -229,7 +234,7 @@
         <hr>
 
         <!-- 18. Cita en bloque <blockquote> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>18. Etiqueta &lt;blockquote&gt; (Cita extensa en bloque)</h2>
             <p>Explicación: Define una cita textual extensa tomada de otra fuente, aplicando sangría automática en el navegador.</p>
             <blockquote cite="https://www.w3.org/">
@@ -240,7 +245,7 @@
         <hr>
 
         <!-- 19. Cita corta en línea <q> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>19. Etiqueta &lt;q&gt; (Cita corta en línea)</h2>
             <p>Explicación: Inserta una cita breve dentro de un párrafo agregando comillas tipográficas de forma automática.</p>
             <p>Demostración: Como indica la guía del taller: <q>El objetivo principal es demostrar dominio de la estructura HTML y organización de archivos</q>.</p>
@@ -249,7 +254,7 @@
         <hr>
 
         <!-- 20. Dirección o contacto <address> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>20. Etiqueta &lt;address&gt; (Información de contacto)</h2>
             <p>Explicación: Proporciona datos de contacto del autor del documento o de una sección (correo, teléfono, ubicación).</p>
             <address>
@@ -263,7 +268,7 @@
         <hr>
 
         <!-- 21. Texto preformateado <pre> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>21. Etiqueta &lt;pre&gt; (Texto preformateado)</h2>
             <p>Explicación: Conserva exactamente los espacios en blanco, tabulaciones y saltos de línea tal como fueron escritos en el archivo HTML.</p>
             <pre>
@@ -283,7 +288,7 @@ ApellidoUno_ApellidoDos_Tll_1/
         <hr>
 
         <!-- 22. Fragmento de código <code> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>22. Etiqueta &lt;code&gt; (Código de computadora)</h2>
             <p>Explicación: Muestra texto con fuente monoespaciada para representar fragmentos de código fuente.</p>
             <p>Demostración: Para enlazar un ícono en la pestaña del navegador usamos <code>&lt;link rel="icon" href="../img/icon/Gengar.ico"&gt;</code>.</p>
@@ -292,7 +297,7 @@ ApellidoUno_ApellidoDos_Tll_1/
         <hr>
 
         <!-- 23. Entrada de teclado <kbd> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>23. Etiqueta &lt;kbd&gt; (Entrada de teclado)</h2>
             <p>Explicación: Representa las teclas o comandos que el usuario debe presionar en su teclado.</p>
             <p>Demostración: Para guardar tus cambios en el editor presiona <kbd>Ctrl</kbd> + <kbd>S</kbd>, y para inspeccionar la página web en el navegador presiona <kbd>F12</kbd>.</p>
@@ -301,7 +306,7 @@ ApellidoUno_ApellidoDos_Tll_1/
         <hr>
 
         <!-- 24. Salida de programa <samp> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>24. Etiqueta &lt;samp&gt; (Salida de muestra de un sistema)</h2>
             <p>Explicación: Representa el mensaje o resultado que devuelve un programa informático o consola.</p>
             <p>Demostración: Al validar el documento HTML sin errores, la terminal mostró el mensaje: <samp>Document checking completed. No errors or warnings to show.</samp></p>
@@ -310,7 +315,7 @@ ApellidoUno_ApellidoDos_Tll_1/
         <hr>
 
         <!-- 25. Variable <var> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>25. Etiqueta &lt;var&gt; (Variable matemática o de programación)</h2>
             <p>Explicación:Identifica el nombre de una variable dentro de una expresión matemática o algoritmo.</p>
             <p>Demostración: El área de un triángulo se calcula multiplicando la base <var>b</var> por la altura <var>h</var> dividida para 2: Área = (<var>b</var> × <var>h</var>) / 2.</p>
@@ -319,7 +324,7 @@ ApellidoUno_ApellidoDos_Tll_1/
         <hr>
 
         <!-- 26. Contenedor en línea <span> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>26. Etiqueta &lt;span&gt; (Contenedor genérico en línea)</h2>
             <p>Explicación: Es un contenedor en línea neutro que permite agrupar palabras o frases dentro de un texto sin generar saltos de línea.</p>
             <p>Demostración: El código de esta asignatura es <span title="Código oficial de la materia en ESPOL">SOFG1006</span> perteneciente a la carrera de Ingeniería.</p>
@@ -328,7 +333,7 @@ ApellidoUno_ApellidoDos_Tll_1/
         <hr>
 
         <!-- 27. Contenedor de bloque <div> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>27. Etiqueta &lt;div&gt; (Contenedor genérico de bloque)</h2>
             <p>Explicación: Es un contenedor de nivel de bloque que permite agrupar varios elementos HTML para estructurar divisiones lógicas.</p>
             <div>
@@ -345,14 +350,15 @@ ApellidoUno_ApellidoDos_Tll_1/
     <hr>
 
     <!-- ================ Pie de página ================== -->
-    <footer>
+    <footer class="container py-4 border-top text-center">
         <p>Desarrollado por: Jose Gustavo Moscoso Ramos</p>
         <p>
-            Contacto: <a href="mailto:jgmoscos@espol.edu.ec">jgmoscos@espol.edu.ec (Correo)</a> | 
+            Contacto: <a href="mailto:jgmoscos@espol.edu.ec">jgmoscos@espol.edu.ec (Correo)</a> |
             <a href="tel:0980463064">0980463064 (Celular)</a>
         </p>
         <p>© 2026 Jose Gustavo Moscoso Ramos. Todos los derechos reservados. Sitio desarrollado con fines académicos para la materia de Desarrollo Web - ESPOL.</p>
     </footer>
+    <script src="../js/vendor/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

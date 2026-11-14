@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de participación | GGspolHUB</title>
+    <meta name="description" content="Solicitud de participacion de ejemplo para GGspolHUB: torneos, desarrollo de videojuegos y software libre.">
+    <meta name="keywords" content="GGspolHUB, ESPOL, formulario, comunidad, videojuegos">
+    <meta name="author" content="Jose Gustavo Moscoso Ramos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/icon/Chansey.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <link rel="stylesheet" href="../css/styleMenuPracticas.css">
+    <link rel="stylesheet" href="../css/styleFormulario.css">
+    <script src="../js/menuPracticas.js" defer></script>
+    <script src="../js/PracticaFormulario.js" defer></script>
+</head>
+<body class="bootstrap-site">
+
+    <header class="container py-4">
+        <h1>GGspolHUB / Participa en la comunidad</h1>
+        <nav class="practice-menu" data-practice-menu aria-label="Navegacion entre practicas">
+            <button type="button" class="practice-menu-toggle" data-practice-toggle aria-controls="practice-links-practicaformulario" aria-expanded="true" hidden>Menu de practicas</button>
+            <div class="practice-menu-links" data-practice-links id="practice-links-practicaformulario">
+                <a href="../index.html">Inicio</a>
+                <a href="../pages/PracticaTexto.html" class="btn btn-outline-secondary btn-sm">Práctica de Texto</a>
+                <a href="../pages/PracticaGoogleSite.html" class="btn btn-outline-secondary btn-sm">Práctica de Builder (Google Site)</a>
+                <a href="../pages/PracticaCanvas.html" class="btn btn-outline-secondary btn-sm">Práctica de Builder (Canva)</a>
+                <a href="../ia/PracticaIA.html" class="btn btn-outline-secondary btn-sm">Práctica de Inteligencia Artificial</a>
+                <a href="../pages/PracticaListas.html" class="btn btn-outline-secondary btn-sm">Práctica de Listas</a>
+                <a href="../pages/PracticaImg.html" class="btn btn-outline-secondary btn-sm">Práctica de Imágenes</a>
+                <a href="../pages/PracticaAudio.html" class="btn btn-outline-secondary btn-sm">Práctica de Audio</a>
+                <a href="../pages/PracticaVideo.html" class="btn btn-outline-secondary btn-sm">Práctica de Video</a>
+                <a href="../pages/PracticaTablas.html" class="btn btn-outline-secondary btn-sm">Práctica de Tablas</a>
+                <a href="../pages/PracticaCss.html" class="btn btn-outline-secondary btn-sm">Práctica de Css</a>
+                <a href="../pages/PracticaCopyPaste.html" class="btn btn-outline-secondary btn-sm">Práctica de CopyPaste</a>
+                <a href="../pages/PracticaHipervinculos.html" class="btn btn-outline-secondary btn-sm">Practica de Hipervínculos</a>
+                <a href="../pages/PracticaJavaScript.html" class="btn btn-outline-secondary btn-sm">Práctica de JavaScript</a>
+                <a href="../pages/PracticaControles.html" class="btn btn-outline-secondary btn-sm">Práctica de Controles</a>
+                <a aria-current="page" href="../pages/PracticaFormulario.html" class="btn btn-outline-secondary btn-sm">Práctica de Formulario</a>
+                <a href="../pages/PracticaAjax.html" class="btn btn-outline-secondary btn-sm">Práctica de Ajax</a>
+                <a href="../pages/PracticaMenuHorizontal.html" class="btn btn-outline-secondary btn-sm">Práctica de Menú Horizontal</a>
+                <a href="../pages/PracticaMenuVertical.html" class="btn btn-outline-secondary btn-sm">Práctica de Menú Vertical</a>
+                <a href="../pages/BootStrap/PracticaBootStrap.html" class="btn btn-outline-secondary btn-sm">Práctica BootStrap</a>
+                <a href="../pages/TailWind/PracticaTailWind.html" class="btn btn-outline-secondary btn-sm">Práctica TailWind</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-4">
+        <section class="hub-intro card card-body mb-4" aria-labelledby="titulo-participacion">
+            <h2 id="titulo-participacion">Encuentra tu espacio en GGspolHUB</h2>
+            <p>Una comunidad ESPOL para compartir torneos, desarrollo de videojuegos y software libre.</p>
+            <p class="mb-0">Esta es una demostracion academica: puedes validar tus datos y ver un resumen, pero no se realiza una inscripcion real ni se envia informacion.</p>
+        </section>
+
+        <noscript>
+            <p class="alert alert-warning">Necesitas JavaScript para validar el formulario y generar el resumen. El boton de validacion permanece deshabilitado sin JavaScript; tus datos no se envian.</p>
+        </noscript>
+
+        <!-- El script habilita la validacion local; no existe envio a un servidor. -->
+        <form id="formulario-hub" class="hub-form card card-body mb-4" aria-labelledby="titulo-formulario">
+            <h2 id="titulo-formulario">Solicitud de participacion</h2>
+            <p>Los campos indicados como obligatorios son necesarios para generar el resumen.</p>
+
+            <fieldset class="mb-4">
+                <legend>Datos del participante</legend>
+                <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                        <label for="nombre" class="form-label">Nombre completo (obligatorio)</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" required minlength="3" maxlength="80" autocomplete="name" aria-describedby="ayuda-nombre error-nombre">
+                        <div id="ayuda-nombre" class="form-text">Escribe entre 3 y 80 caracteres.</div>
+                        <div id="error-nombre" class="invalid-feedback">Escribe un nombre de al menos 3 caracteres, sin contar espacios al inicio o al final.</div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="correo" class="form-label">Correo electronico (obligatorio)</label>
+                        <input type="email" id="correo" name="correo" class="form-control" required maxlength="120" autocomplete="email" aria-describedby="ayuda-correo error-correo">
+                        <div id="ayuda-correo" class="form-text">Recomendamos tu correo institucional, pero puedes usar cualquier correo valido.</div>
+                        <div id="error-correo" class="invalid-feedback">Escribe un correo valido de hasta 120 caracteres.</div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="alias" class="form-label">Alias (opcional)</label>
+                        <input type="text" id="alias" name="alias" class="form-control" maxlength="30" autocomplete="nickname" aria-describedby="ayuda-alias">
+                        <div id="ayuda-alias" class="form-text">Puedes usar tu nickname, con un maximo de 30 caracteres.</div>
+                        <p class="mt-2 mb-0">Vista previa: <span id="vista-alias">Tu alias aparecera aqui</span></p>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="mb-4">
+                <legend>Intereses en la comunidad</legend>
+                <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                        <label for="area" class="form-label">Area de interes (obligatoria)</label>
+                        <select id="area" name="area" class="form-select" required aria-describedby="error-area">
+                            <option value="">Selecciona un area</option>
+                            <option value="torneos">Torneos</option>
+                            <option value="desarrollo">Desarrollo de videojuegos</option>
+                            <option value="modding">Modding y software libre</option>
+                        </select>
+                        <div id="error-area" class="invalid-feedback">Selecciona un area de interes.</div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="actividad" class="form-label">Actividad que propones (obligatoria)</label>
+                        <input type="text" id="actividad" name="actividad" class="form-control" required maxlength="120" aria-describedby="ayuda-actividad error-actividad">
+                        <div id="ayuda-actividad" class="form-text">Por ejemplo, organizar un torneo o colaborar en un juego libre. Maximo 120 caracteres.</div>
+                        <div id="error-actividad" class="invalid-feedback">Describe una actividad en un maximo de 120 caracteres.</div>
+                    </div>
+                    <div class="col-12">
+                        <label for="mensaje" class="form-label">Mensaje adicional (opcional)</label>
+                        <textarea id="mensaje" name="mensaje" class="form-control" rows="4" maxlength="600" aria-describedby="ayuda-mensaje"></textarea>
+                        <div id="ayuda-mensaje" class="form-text">Comparte tus ideas o experiencia en un maximo de 600 caracteres. No incluyas datos sensibles.</div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="d-flex flex-column flex-sm-row gap-2">
+                <button type="submit" id="btn-validar" class="btn btn-primary" disabled>Validar solicitud</button>
+                <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
+            </div>
+        </form>
+
+        <p id="estado-formulario" class="alert alert-info" role="status" aria-live="polite">Demostracion local: completa el formulario para validar tus datos. No se envia informacion ni se registra una inscripcion.</p>
+
+        <!-- El resumen se completa con textContent despues de validar los campos. -->
+        <section id="resumen-solicitud" class="hub-summary card card-body mb-4" aria-labelledby="titulo-resumen" hidden>
+            <h2 id="titulo-resumen">Resumen de tu solicitud</h2>
+            <p>Vista previa de demostracion. No se ha enviado esta informacion.</p>
+            <dl class="row mb-0">
+                <dt class="col-12 col-md-4">Nombre completo</dt>
+                <dd id="resumen-nombre" class="col-12 col-md-8"></dd>
+                <dt class="col-12 col-md-4">Correo electronico</dt>
+                <dd id="resumen-correo" class="col-12 col-md-8"></dd>
+                <dt class="col-12 col-md-4">Alias</dt>
+                <dd id="resumen-alias" class="col-12 col-md-8"></dd>
+                <dt class="col-12 col-md-4">Area de interes</dt>
+                <dd id="resumen-area" class="col-12 col-md-8"></dd>
+                <dt class="col-12 col-md-4">Actividad propuesta</dt>
+                <dd id="resumen-actividad" class="col-12 col-md-8"></dd>
+                <dt class="col-12 col-md-4">Mensaje adicional</dt>
+                <dd id="resumen-mensaje" class="col-12 col-md-8"></dd>
+            </dl>
+        </section>
+
+        <section id="preguntas-taller" class="preguntas-taller card card-body mb-4" aria-labelledby="titulo-preguntas">
+            <header class="encabezado-preguntas mb-3">
+                <p>SOFG1006 - Desarrollo de Aplicaciones Web y Moviles</p>
+                <h2 id="titulo-preguntas">Preguntas sobre JavaScript</h2>
+            </header>
+            <ol class="lista-preguntas">
+                <li>
+                    <h3>Que hace <code>validarCamposHub()</code>?</h3>
+                    <p>Comprueba que el nombre tenga al menos tres caracteres despues de quitar espacios de los extremos mediante <code>trim()</code>. Usa <code>setCustomValidity()</code> y, tras un intento de validacion, actualiza <code>aria-invalid</code> en los campos.</p>
+                </li>
+                <li>
+                    <h3>Como se comprueba la validez del formulario?</h3>
+                    <p><code>checkValidity()</code> revisa las restricciones HTML, como <code>required</code>, <code>type="email"</code> y los limites de longitud, ademas de la regla personalizada del nombre. Si hay errores, el script oculta el resumen y enfoca el primer campo no valido.</p>
+                </li>
+                <li>
+                    <h3>Que contiene el objeto <code>solicitud</code>?</h3>
+                    <p>Reune <code>nombre</code>, <code>correo</code>, <code>alias</code>, <code>area</code>, <code>actividad</code> y <code>mensaje</code> despues de validar. Si los campos opcionales estan vacios, usa los textos "Sin alias" y "Sin mensaje adicional".</p>
+                </li>
+                <li>
+                    <h3>Para que sirve el evento <code>input</code>?</h3>
+                    <p>Actualiza la vista previa del alias mientras se escribe, vuelve a comprobar los campos y oculta un resumen anterior cuando cambian los datos para evitar mostrar informacion desactualizada.</p>
+                </li>
+                <li>
+                    <h3>Por que se escucha <code>submit</code> y se llama a <code>preventDefault()</code>?</h3>
+                    <p>El evento <code>submit</code> permite validar tanto con el boton como con el teclado. <code>preventDefault()</code> evita el envio y la navegacion predeterminados: el script solo muestra un resumen local si los datos son validos.</p>
+                </li>
+                <li>
+                    <h3>Que ocurre con el evento <code>reset</code>?</h3>
+                    <p>El navegador devuelve los campos a sus valores iniciales. El script elimina los estados de validacion, borra el resumen, lo oculta y restaura el texto inicial de la vista previa del alias y el aviso informativo.</p>
+                </li>
+                <li>
+                    <h3>Por que se usa <code>textContent</code> en lugar de <code>innerHTML</code>?</h3>
+                    <p><code>textContent</code> muestra lo escrito como texto, sin interpretarlo como etiquetas HTML. Asi se actualizan de forma segura el alias, el estado y los datos del resumen.</p>
+                </li>
+                <li>
+                    <h3>Se guardan o se envian los datos?</h3>
+                    <p>No. No hay backend, peticiones de red ni persistencia en <code>localStorage</code>, <code>sessionStorage</code> o una base de datos. El objeto y el resumen solo se usan en la pagina actual; no representan una inscripcion real.</p>
+                </li>
+            </ol>
+        </section>
+    </main>
+	<!-- ================ Pie de página ================== -->
+    <footer class="container py-4 border-top text-center">
+        <p>Desarrollado por: Jose Gustavo Moscoso Ramos</p>
+        <p>
+            <a href="mailto:jgmoscos@espol.edu.ec">Correo</a>
+            <a href="tel:0980463064">Celular</a>
+        </p>
+        <p> © 2026 - Página de practicas académicas ESPOL</p>
+    </footer>
+    <script src="../js/vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 
 <head>
     <!-- ================ Metadatos ================== -->
@@ -8,53 +8,58 @@
     <meta name="keywords" content="HTML, Imágenes, img, figure, figcaption, picture, map, area, Nube, ESPOL">
     <meta name="author" content="Jose Gustavo Moscoso Ramos">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styleGeneral.css">
     <!-- ================ Título e Iconos ================== -->
-    <title>Practica Jose Gustavo Moscoso Ramos - Imágenes en HTML</title>
-    <link rel="icon" href="../img/icon/Gengar.ico" type="image/x-icon">
+    <title>Imágenes HTML | GGspolHUB</title>
+
+    <link rel="icon" href="../img/icon/Butterfree.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <link rel="stylesheet" href="../css/styleMenuPracticas.css">
+    <script src="../js/menuPracticas.js" defer></script>
 </head>
 
-<body>
+<body class="bootstrap-site">
     <!-- ================ Cabecera y Menú Horizontal ================== -->
-    <header>
+    <header class="container py-4">
         <h1>Práctica 6: Imágenes en HTML</h1>
-        <nav>
-            <!--  Lista de navegacion de las prácticas por desarrollar-->
-            <a href="../pages/PracticaTexto.html">Práctica de Texto</a> |
-            <a href="../pages/PracticaGoogleSite.html">Práctica de Builder (Google Site)</a> |
-            <a href="../pages/PracticaTexto.html">Práctica de Builder (Canva)</a> |
-            <a href="../ia/PracticaIA.html">Práctica de Inteligencia Artificial</a> |
-            <a href="../pages/PracticaListas.html">Práctica de Listas</a> |
-            <a href="../pages/PracticaImg.html">Práctica de Imágenes</a> |
-            <a href="../pages/PracticaAudio.html">Práctica de Audio</a> |
-            <a href="../pages/PracticaVideo.html">Práctica de Video</a> |
-            <a href="../pages/PracticaTablas.html">Práctica de Tablas</a> |
-            <a href="../pages/PracticaCss.html">Práctica de Css</a> |
-            <a href="../pages/PracticaCopyPaste.html">Práctica de CopyPaste</a> |
-            <a href="../pages/PracticaHipervinculos.html">Practica de Hipervínculos</a> |
-            <a href="../pages/PracticaJavaScript.html">Práctica de JavaScript</a> |
-            <a href="../pages/PracticaControles.html">Práctica de Controles</a> |
-            <a href="../pages/PracticaFormulario.html">Práctica de Formulario</a> |
-            <a href="../pages/PracticaFormulario2.html">Práctica de Formulario-2</a> |
-            <a href="../pages/PracticaMenuHorizontal.html">Práctica de Menú Horizontal</a> |
-            <a href="../pages/PracticaMenuVertical.html">Práctica de Menú Vertical</a> |
-            <a href="../pages/PracticaCrazy.html">Práctica de Crazy</a> |<!-- Diseño interactivo Propio "Loco" -->
-            <a href="../pages/BootStrap/PracticaBootStrap.html">Práctica BootStrap</a> |
-            <a href="../pages/TailWind/PracticaTailWind.html">Práctica TailWind</a> |
-            <a href="../pages/TailWind/PracticaTailWind_Black.html">Práctica TailWind - Black</a>
+        <nav class="practice-menu" data-practice-menu aria-label="Navegacion entre practicas">
+            <button type="button" class="practice-menu-toggle" data-practice-toggle aria-controls="practice-links-practicaimg" aria-expanded="true" hidden>Menu de practicas</button>
+            <div class="practice-menu-links" data-practice-links id="practice-links-practicaimg">
+                <a href="../index.html">Inicio</a>
+                <a href="../pages/PracticaTexto.html" class="btn btn-outline-secondary btn-sm">Práctica de Texto</a>
+                <a href="../pages/PracticaGoogleSite.html" class="btn btn-outline-secondary btn-sm">Práctica de Builder (Google Site)</a>
+                <a href="../pages/PracticaCanvas.html" class="btn btn-outline-secondary btn-sm">Práctica de Builder (Canva)</a>
+                <a href="../ia/PracticaIA.html" class="btn btn-outline-secondary btn-sm">Práctica de Inteligencia Artificial</a>
+                <a href="../pages/PracticaListas.html" class="btn btn-outline-secondary btn-sm">Práctica de Listas</a>
+                <a aria-current="page" href="../pages/PracticaImg.html" class="btn btn-outline-secondary btn-sm">Práctica de Imágenes</a>
+                <a href="../pages/PracticaAudio.html" class="btn btn-outline-secondary btn-sm">Práctica de Audio</a>
+                <a href="../pages/PracticaVideo.html" class="btn btn-outline-secondary btn-sm">Práctica de Video</a>
+                <a href="../pages/PracticaTablas.html" class="btn btn-outline-secondary btn-sm">Práctica de Tablas</a>
+                <a href="../pages/PracticaCss.html" class="btn btn-outline-secondary btn-sm">Práctica de Css</a>
+                <a href="../pages/PracticaCopyPaste.html" class="btn btn-outline-secondary btn-sm">Práctica de CopyPaste</a>
+                <a href="../pages/PracticaHipervinculos.html" class="btn btn-outline-secondary btn-sm">Practica de Hipervínculos</a>
+                <a href="../pages/PracticaJavaScript.html" class="btn btn-outline-secondary btn-sm">Práctica de JavaScript</a>
+                <a href="../pages/PracticaControles.html" class="btn btn-outline-secondary btn-sm">Práctica de Controles</a>
+                <a href="../pages/PracticaFormulario.html" class="btn btn-outline-secondary btn-sm">Práctica de Formulario</a>
+                <a href="../pages/PracticaAjax.html" class="btn btn-outline-secondary btn-sm">Práctica de Ajax</a>
+                <a href="../pages/PracticaMenuHorizontal.html" class="btn btn-outline-secondary btn-sm">Práctica de Menú Horizontal</a>
+                <a href="../pages/PracticaMenuVertical.html" class="btn btn-outline-secondary btn-sm">Práctica de Menú Vertical</a>
+                <a href="../pages/BootStrap/PracticaBootStrap.html" class="btn btn-outline-secondary btn-sm">Práctica BootStrap</a>
+                <a href="../pages/TailWind/PracticaTailWind.html" class="btn btn-outline-secondary btn-sm">Práctica TailWind</a>
+            </div>
         </nav>
     </header>
 
     <hr>
 
     <!-- ================ Contenido Principal ================== -->
-    <main>
-        <section>
+    <main class="container py-4">
+        <section class="card card-body mb-4">
             <h2>Descripción de la Práctica</h2>
             <p>
-                Demostración del uso de etiquetas multimedia para imágenes en HTML (<code>&lt;img&gt;</code>, 
-                <code>&lt;figure&gt;</code>, <code>&lt;figcaption&gt;</code>, <code>&lt;picture&gt;</code>, 
-                <code>&lt;source&gt;</code>, <code>&lt;map&gt;</code> y <code>&lt;area&gt;</code>), integrando la 
+                Demostración del uso de etiquetas multimedia para imágenes en HTML (<code>&lt;img&gt;</code>,
+                <code>&lt;figure&gt;</code>, <code>&lt;figcaption&gt;</code>, <code>&lt;picture&gt;</code>,
+                <code>&lt;source&gt;</code>, <code>&lt;map&gt;</code> y <code>&lt;area&gt;</code>), integrando la
                 práctica de mapeo de dispositivos en la nube desarrollada en clase.
             </p>
         </section>
@@ -62,48 +67,48 @@
         <hr>
 
         <!-- 1. Imagen desde un directorio local con alt, title, width y height -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>1. Imagen desde un directorio local (Atributos <code>src</code>, <code>alt</code>, <code>title</code>, <code>width</code> y <code>height</code>)</h2>
             <p>
-                Explicación: Carga una imagen alojada en la carpeta <code>../img/</code> del proyecto utilizando una ruta relativa. 
+                Explicación: Carga una imagen alojada en la carpeta <code>../img/</code> del proyecto utilizando una ruta relativa.
                 Pasa el cursor sobre la imagen para ver el atributo <code>title</code>.
             </p>
-            <img 
-                src="../img/icon/Gengar.ico" 
-                alt="Ícono de Gengar utilizado como favicon del proyecto" 
-                title="Gengar - Ícono oficial del sitio de Jose Gustavo Moscoso Ramos" 
-                width="128" 
-                height="128"
+            <img
+                src="../img/icon/Gengar.ico"
+                alt="Ícono de Gengar utilizado como favicon del proyecto"
+                title="Gengar - Ícono oficial del sitio de Jose Gustavo Moscoso Ramos"
+                width="128"
+                height="128" class="img-fluid rounded"
             >
         </section>
 
         <hr>
 
         <!-- 2. Imagen desde una dirección web externa -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>2. Imagen desde una dirección web (URL Externa)</h2>
             <p>Explicación: Inserta una imagen alojada en un servidor externo mediante una ruta absoluta HTTP/HTTPS.</p>
-            <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" 
-                alt="Logotipo oficial de HTML5 desde Wikimedia Commons" 
-                title="Estándar HTML5 - W3C / WHATWG" 
-                width="200" 
-                height="200"
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+                alt="Logotipo oficial de HTML5 desde Wikimedia Commons"
+                title="Estándar HTML5 - W3C / WHATWG"
+                width="200"
+                height="200" class="img-fluid rounded"
             >
         </section>
 
         <hr>
 
         <!-- 3. Imagen como enlace -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>3. Imagen como hipervínculo (&lt;a&gt; envolviendo a &lt;img&gt;)</h2>
             <p>Explicación: Al colocar una etiqueta <code>&lt;img&gt;</code> dentro de <code>&lt;a&gt;</code>, la imagen se vuelve clicable. Haz clic en la imagen para ir al portal de la ESPOL en una nueva pestaña:</p>
             <a href="https://www.espol.edu.ec" target="_blank" rel="noopener noreferrer" title="Haz clic para visitar el sitio oficial de la ESPOL">
-                <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Logo_ESPOL.svg" 
-                    alt="Logo de la Escuela Superior Politécnica del Litoral" 
-                    title="Ir al portal web de ESPOL (Nueva pestaña)" 
-                    width="300"
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Logo_ESPOL.svg"
+                    alt="Logo de la Escuela Superior Politécnica del Litoral"
+                    title="Ir al portal web de ESPOL (Nueva pestaña)"
+                    width="300" class="img-fluid rounded"
                 >
             </a>
         </section>
@@ -111,15 +116,15 @@
         <hr>
 
         <!-- 4. Imagen con pie de foto (<figure> y <figcaption>) -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>4. Imagen semántica con pie de foto (&lt;figure&gt; y &lt;figcaption&gt;)</h2>
             <p>Explicación: La etiqueta <code>&lt;figure&gt;</code> agrupa una ilustración o diagrama, mientras que <code>&lt;figcaption&gt;</code> le asigna una leyenda descriptiva oficial.</p>
             <figure>
-                <img 
-                    src="../img/Cloud-2.png" 
-                    alt="Diagrama de arquitectura de red y computación en la nube" 
-                    title="Arquitectura Cloud Computing" 
-                    width="450"
+                <img
+                    src="../img/Cloud-2.png"
+                    alt="Diagrama de arquitectura de red y computación en la nube"
+                    title="Arquitectura Cloud Computing"
+                    width="450" class="img-fluid rounded"
                 >
                 <figcaption>Figura 1: Ecosistema de dispositivos conectados a la infraestructura de la nube (Cloud-2.png).</figcaption>
             </figure>
@@ -128,10 +133,10 @@
         <hr>
 
         <!-- 5. Etiquetas <picture> y <source> -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>5. Imágenes adaptables con &lt;picture&gt; y &lt;source&gt;</h2>
             <p>
-                Explicación: El elemento <code>&lt;picture&gt;</code> permite definir múltiples fuentes (<code>&lt;source&gt;</code>) 
+                Explicación: El elemento <code>&lt;picture&gt;</code> permite definir múltiples fuentes (<code>&lt;source&gt;</code>)
                 para que el navegador cargue una imagen distinta según el ancho de la pantalla (redimensiona la ventana del navegador para probarlo).
             </p>
             <picture>
@@ -140,27 +145,28 @@
                 <!-- Si la pantalla mide menos de 800px, muestra el ícono de Gengar -->
                 <source media="(max-width: 799px)" srcset="../img/icon/Gengar.ico">
                 <!-- Imagen de respaldo obligatoria -->
-                <img src="../img/Cloud-2.png" alt="Imagen adaptable demostrativa" title="Imagen cargada mediante la etiqueta picture" width="350">
+                <img src="../img/Cloud-2.png" alt="Imagen adaptable demostrativa" title="Imagen cargada mediante la etiqueta picture" width="350" class="img-fluid rounded">
             </picture>
         </section>
 
         <hr>
 
         <!-- 6. Mapa de Imagen interactivo (Tu avance de Cloud-2.png integrado) -->
-        <section>
+        <section class="card card-body mb-4">
             <h2>6. Mapa de Imagen Interactivo (&lt;map&gt;, &lt;area&gt;, <code>usemap</code>, <code>shape</code> y <code>coords</code>)</h2>
             <p>
-                Explicación: Esta sección integra la práctica desarrollada en clase sobre <strong>Cloud-2.png</strong>. 
+                Explicación: Esta sección integra la práctica desarrollada en clase sobre <strong>Cloud-2.png</strong>.
                 Haz clic sobre cualquiera de los 8 dispositivos de la imagen para abrir su página descriptiva correspondiente ubicada en <code>Pages/Nube/</code>:
             </p>
 
             <!-- Imagen vinculada al mapa mediante usemap="#image-map" -->
-            <img 
-                src="../img/Cloud-2.png" 
-                usemap="#image-map" 
-                alt="Mapa interactivo de dispositivos conectados a la nube" 
+            <div class="overflow-auto"><img
+                src="../img/Cloud-2.png"
+                usemap="#image-map"
+                class="map-image"
+                alt="Mapa interactivo de dispositivos conectados a la nube"
                 title="Haz clic sobre un dispositivo para ver su información"
-            >
+            ></div>
 
             <!-- Definición del mapa con tus 8 dispositivos de la carpeta Nube -->
             <!-- Nota: Si en tu Index.html original tienes coordenadas específicas distintas, puedes reemplazar el atributo coords conservando los href="Nube/..." -->
@@ -196,14 +202,15 @@
     <hr>
 
     <!-- ================ Pie de página ================== -->
-    <footer>
+    <footer class="container py-4 border-top text-center">
         <p>Desarrollado por: Jose Gustavo Moscoso Ramos</p>
         <p>
-            Contacto: <a href="mailto:jgmoscos@espol.edu.ec">jgmoscos@espol.edu.ec (Correo)</a> | 
+            Contacto: <a href="mailto:jgmoscos@espol.edu.ec">jgmoscos@espol.edu.ec (Correo)</a> |
             <a href="tel:0980463064">0980463064 (Celular)</a>
         </p>
         <p>© 2026 Jose Gustavo Moscoso Ramos. Todos los derechos reservados. Sitio desarrollado con fines académicos para la materia de Desarrollo Web - ESPOL.</p>
     </footer>
+    <script src="../js/vendor/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

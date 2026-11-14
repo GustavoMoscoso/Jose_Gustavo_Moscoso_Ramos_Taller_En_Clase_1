@@ -1,0 +1,9 @@
+/* Ajustes exclusivos de la solicitud; el tema y el menu siguen siendo compartidos. */
+.bootstrap-site .hub-intro { border-left: 3px solid var(--accent-ice); }
+.hub-form fieldset { min-width: 0; }
+.hub-form legend { font-size: 1.1rem; font-weight: 600; color: var(--accent-steel); }
+.hub-form .form-control, .hub-form .form-select, .hub-form .btn { min-height: 48px; }
+.hub-form .form-control, .hub-form .form-select { font-size: 1rem; }
+.hub-summary dd { margin-left: 0; overflow-wrap: anywhere; white-space: pre-wrap; }
+.hub-summary[hidden] { display: none !important; }
+.hub-summary dt { font-size: .8rem; color: var(--text-muted); }

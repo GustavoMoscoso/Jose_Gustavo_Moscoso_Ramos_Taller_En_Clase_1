@@ -6,19 +6,24 @@
 
   <!-- Permite diseño adaptable en celulares, tablets y escritorio -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jose Gustavo Moscoso Ramos">
+  <meta name="description" content="Practica de interfaces responsive con Tailwind CSS para GGspol HUB.">
+  <link rel="icon" href="../../img/icon/Squirtle.ico" type="image/x-icon">
 
   <!-- Título del documento -->
-  <title>GGspol HUB - Tailwind</title>
+  <title>Interfaces con Tailwind CSS | GGspolHUB</title>
 
   <!-- CDN de Tailwind para práctica en navegador -->
   <!-- Según la documentación, este método es para desarrollo, no para producción -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../../css/styleMenuPracticas.css">
+  <script src="../../js/menuPracticas.js" defer></script>
 </head>
 
 <body class="bg-gray-100 text-gray-900">
 
   <!-- Barra de navegación hecha con utilidades de Tailwind -->
-  <nav class="bg-gray-900 text-white">
+  <nav class="practice-menu bg-gray-900 text-white" data-practice-menu aria-label="Navegacion entre practicas">
     <!-- max-w-6xl limita el ancho máximo -->
     <!-- mx-auto centra el contenido -->
     <!-- px-4 agrega espacio horizontal -->
@@ -26,15 +31,16 @@
     <div class="max-w-6xl mx-auto px-4 py-4">
       <!-- flex organiza elementos en fila -->
       <!-- flex-col en celular coloca los elementos en columna -->
-      <!-- md:flex-row desde pantalla mediana los coloca en fila -->
+      <!-- Desde 992px los elementos se colocan en fila -->
       <!-- justify-between separa marca y menú -->
       <!-- gap-4 agrega separación entre elementos -->
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div class="flex flex-col min-[992px]:flex-row min-[992px]:items-center min-[992px]:justify-between gap-4">
         <a href="#" class="text-2xl font-bold">GGspol HUB</a>
 
         <!-- Menú de navegación -->
-        <div class="flex flex-col md:flex-row gap-3 md:gap-6">
-          <a href="#" class="hover:text-yellow-300">Inicio</a>
+        <button type="button" class="practice-menu-toggle rounded-lg border border-gray-500 px-4 py-2 text-left text-white hover:bg-gray-800" data-practice-toggle aria-controls="practice-links-tailwind" aria-expanded="true" hidden>Menu de practicas</button>
+        <div class="practice-menu-links flex flex-col min-[992px]:flex-row gap-3 min-[992px]:gap-6" data-practice-links id="practice-links-tailwind">
+          <a href="../../index.html" class="hover:text-yellow-300">Inicio del taller</a>
           <a href="#actividades" class="hover:text-yellow-300">Actividades</a>
           <a href="#contacto" class="hover:text-yellow-300">Contactanos</a>
         </div>

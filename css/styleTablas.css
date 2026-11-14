@@ -1,0 +1,11 @@
+.bootstrap-site .table-column-groups {
+    --bs-table-bg: transparent;
+}
+
+.bootstrap-site .table-column-groups .column-primary {
+    background-color: var(--bs-primary-bg-subtle);
+}
+
+.bootstrap-site .table-column-groups .column-secondary {
+    background-color: var(--bs-secondary-bg-subtle);
+}

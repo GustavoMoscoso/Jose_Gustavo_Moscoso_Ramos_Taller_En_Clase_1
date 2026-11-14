@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+    <!-- Todas las páginas que desarrolle, deben tener la misma estructura-->
+    <!-- MetaData-->
+    <!-- Página principal de las practicas-->
+    <!-- ================ metadatos================== -->
+    <meta charset="utf-8">
+	<!-- La escritura de caracteres especiales áéíóú ñ-->
+    <meta name="description" content="practicas-- img,html,css,js"><!-- -->
+    <meta name="keywords" content="HTM, CSS, JavaScript"><!-- -->
+    <meta name="author" content="Gustavo"><!-- -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ================ Título e Iconos================== -->
+
+    <!-- Todas las páginas que Desarrollemos en práctica deberan tener Título-->
+    <title>Controles HTML | GGspolHUB</title>
+    <!-- Todas las páginas que Desarrollemos en práctica deberan tener íconos-->
+
+    <link rel="icon" href="../img/icon/Charmeleon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <link rel="stylesheet" href="../css/styleMenuPracticas.css">
+    <script src="../js/menuPracticas.js" defer></script>
+</head>
+
+<body class="bootstrap-site">
+    <!-- ================ Cabecera y Menú Horizontal ================== -->
+    <header class="container py-4">
+        <h1>Práctica 14: Controles en HTML</h1>
+    <nav class="practice-menu" data-practice-menu aria-label="Navegacion entre practicas">
+            <button type="button" class="practice-menu-toggle" data-practice-toggle aria-controls="practice-links-practicacontroles" aria-expanded="true" hidden>Menu de practicas</button>
+            <div class="practice-menu-links" data-practice-links id="practice-links-practicacontroles">
+                <a href="../index.html">Inicio</a>
+                <a href="../pages/PracticaTexto.html" class="btn btn-outline-secondary btn-sm">Práctica de Texto</a>
+                <a href="../pages/PracticaGoogleSite.html" class="btn btn-outline-secondary btn-sm">Práctica de Builder (Google Site)</a>
+                <a href="../pages/PracticaCanvas.html" class="btn btn-outline-secondary btn-sm">Práctica de Builder (Canva)</a>
+                <a href="../ia/PracticaIA.html" class="btn btn-outline-secondary btn-sm">Práctica de Inteligencia Artificial</a>
+                <a href="../pages/PracticaListas.html" class="btn btn-outline-secondary btn-sm">Práctica de Listas</a>
+                <a href="../pages/PracticaImg.html" class="btn btn-outline-secondary btn-sm">Práctica de Imágenes</a>
+                <a href="../pages/PracticaAudio.html" class="btn btn-outline-secondary btn-sm">Práctica de Audio</a>
+                <a href="../pages/PracticaVideo.html" class="btn btn-outline-secondary btn-sm">Práctica de Video</a>
+                <a href="../pages/PracticaTablas.html" class="btn btn-outline-secondary btn-sm">Práctica de Tablas</a>
+                <a href="../pages/PracticaCss.html" class="btn btn-outline-secondary btn-sm">Práctica de Css</a>
+                <a href="../pages/PracticaCopyPaste.html" class="btn btn-outline-secondary btn-sm">Práctica de CopyPaste</a>
+                <a href="../pages/PracticaHipervinculos.html" class="btn btn-outline-secondary btn-sm">Practica de Hipervínculos</a>
+                <a href="../pages/PracticaJavaScript.html" class="btn btn-outline-secondary btn-sm">Práctica de JavaScript</a>
+                <a aria-current="page" href="../pages/PracticaControles.html" class="btn btn-outline-secondary btn-sm">Práctica de Controles</a>
+                <a href="../pages/PracticaFormulario.html" class="btn btn-outline-secondary btn-sm">Práctica de Formulario</a>
+                <a href="../pages/PracticaAjax.html" class="btn btn-outline-secondary btn-sm">Práctica de Ajax</a>
+                <a href="../pages/PracticaMenuHorizontal.html" class="btn btn-outline-secondary btn-sm">Práctica de Menú Horizontal</a>
+                <a href="../pages/PracticaMenuVertical.html" class="btn btn-outline-secondary btn-sm">Práctica de Menú Vertical</a>
+                <a href="../pages/BootStrap/PracticaBootStrap.html" class="btn btn-outline-secondary btn-sm">Práctica BootStrap</a>
+                <a href="../pages/TailWind/PracticaTailWind.html" class="btn btn-outline-secondary btn-sm">Práctica TailWind</a>
+            </div>
+        </nav>
+    </header>
+    <main class="container py-4">
+    <h1>Formulario de Registro de Estudiante</h1>
+
+    <form>
+        <!-- Grupo 1: Datos personales -->
+        <fieldset class="border rounded p-3 mb-4">
+            <legend>Datos personales</legend>
+
+            <label for="nombre" class="form-label">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" class="form-control">
+            <br><br>
+
+            <label for="email" class="form-label">Correo electrónico:</label>
+            <input type="email" id="email" name="email" class="form-control">
+            <br><br>
+
+            <label for="password" class="form-label">Contraseña:</label>
+            <input type="password" id="password" name="password" class="form-control">
+            <br><br>
+
+            <label for="telefono" class="form-label">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" class="form-control">
+            <br><br>
+
+            <label for="fecha" class="form-label">Fecha de nacimiento:</label>
+            <input type="date" id="fecha" name="fecha" class="form-control">
+        </fieldset>
+
+        <br>
+
+        <!-- Grupo 2: Información académica -->
+        <fieldset class="border rounded p-3 mb-4">
+            <legend>Información académica</legend>
+
+            <label for="carrera" class="form-label">Carrera:</label>
+            <select id="carrera" name="carrera" class="form-select">
+                <option value="computacion">Computacion</option>
+                <option value="redes">Redes</option>
+                <option value="electronica">Electronica</option>
+                <option value="datos">Ciencia de Datos</option>
+            </select>
+            <br><br>
+
+            <label for="semestre" class="form-label">Semestre:</label>
+            <input type="number" id="semestre" name="semestre" min="1" max="10" class="form-control">
+            <br><br>
+
+            <p>Modalidad de estudio:</p>
+            <label class="form-label">
+                <input type="radio" name="modalidad" value="presencial" class="form-check-input">
+                Presencial
+            </label>
+            <br>
+            <label class="form-label">
+                <input type="radio" name="modalidad" value="virtual" class="form-check-input">
+                Virtual
+            </label>
+            <br>
+            <label class="form-label">
+                <input type="radio" name="modalidad" value="hibrida" class="form-check-input">
+                Híbrida
+            </label>
+        </fieldset>
+
+        <br>
+
+        <!-- Grupo 3: Intereses del estudiante -->
+        <fieldset class="border rounded p-3 mb-4">
+            <legend>Intereses del estudiante</legend>
+
+            <label class="form-label">
+                <input type="checkbox" name="intereses" value="html" class="form-check-input">
+                HTML
+            </label>
+            <br>
+            <label class="form-label">
+                <input type="checkbox" name="intereses" value="css" class="form-check-input">
+                CSS
+            </label>
+            <br>
+            <label class="form-label">
+                <input type="checkbox" name="intereses" value="javascript" class="form-check-input">
+                JavaScript
+            </label>
+            <br>
+            <label class="form-label">
+                <input type="checkbox" name="intereses" value="python" class="form-check-input">
+                Python
+            </label>
+            <br>
+            <label class="form-label">
+                <input type="checkbox" name="intereses" value="base_datos" class="form-check-input">
+                Base de datos
+            </label>
+        </fieldset>
+
+        <br>
+
+        <!-- Grupo 4: Otros datos -->
+        <fieldset class="border rounded p-3 mb-4">
+            <legend>Otros datos</legend>
+
+            <label for="nivel" class="form-label">Nivel de conocimiento:</label>
+            <input type="range" id="nivel" name="nivel" min="0" max="100" class="form-range">
+            <br><br>
+
+            <label for="color" class="form-label">Color favorito:</label>
+            <input type="color" id="color" name="color" class="form-control form-control-color">
+            <br><br>
+
+            <label for="archivo" class="form-label">Subir archivo:</label>
+            <input type="file" id="archivo" name="archivo" class="form-control">
+            <br><br>
+
+            <label for="lenguaje" class="form-label">Lenguaje favorito:</label>
+            <input list="lenguajes" id="lenguaje" name="lenguaje" class="form-control">
+            <datalist id="lenguajes">
+                <option value="HTML">
+                <option value="CSS">
+                <option value="JavaScript">
+                <option value="Python">
+                <option value="Java">
+                <option value="PHP">
+            </datalist>
+            <br><br>
+
+            <label for="comentario" class="form-label">Comentario:</label>
+            <br>
+            <textarea id="comentario" name="comentario" rows="5" cols="40" class="form-control"></textarea>
+        </fieldset>
+
+        <br>
+
+        <!-- Botones de acción -->
+        <input type="submit" value="Enviar registro" class="btn btn-primary">
+        <input type="reset" value="Limpiar formulario" class="btn btn-outline-secondary">
+    </form>
+    </main>
+
+    <!-- ================ Pie de página ================== -->
+    <footer class="container py-4 border-top text-center">
+        <p>Desarrollado por: Jose Gustavo Moscoso Ramos</p>
+        <p>
+            <a href="mailto:jgmoscos@espol.edu.ec">Correo</a>
+            <a href="tel:0980463064">Celular</a>
+        </p>
+        <p> © 2026 - Página de practicas académicas ESPOL</p>
+    </footer>
+    <!-- Contadores de visitas-->
+    <!-- El contador solo en la página principal-->
+    <script src="../js/vendor/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
